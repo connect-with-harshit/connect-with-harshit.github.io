@@ -1,596 +1,446 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="auto">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harshit Soni — Operations & Project Leadership</title>
-<meta name="description" content="Senior operations and project delivery leader with 7+ years building execution systems that scale across manufacturing, retail, and service businesses.">
+<meta name="description" content="Senior operations and project delivery leader with 7+ years building execution systems that scale.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alta+Caption&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* ── Theme ── */
 :root {
-  --bg: #f8f7f4;
-  --bg2: #ffffff;
-  --bg3: #f0ede8;
-  --bg4: #e8e4dd;
-  --border: rgba(0,0,0,0.08);
-  --border2: rgba(0,0,0,0.15);
-  --text: #1a1814;
-  --text2: #5a5650;
-  --text3: #9a9590;
-  --accent: #c8521a;
-  --accent2: rgba(200,82,26,0.1);
-  --accent3: rgba(200,82,26,0.06);
-  --blue: #1a4fa0;
-  --green: #1a6640;
-  --shadow: rgba(0,0,0,0.06);
-  --shadow2: rgba(0,0,0,0.12);
-  --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
-  --nav-bg: rgba(248,247,244,0.88);
+  --bg:#0a0906;
+  --bg2:#111009;
+  --bg3:#18160f;
+  --bg4:#201e16;
+  --border:rgba(212,180,100,0.1);
+  --border2:rgba(212,180,100,0.2);
+  --text:#f5f0e8;
+  --text2:#a09880;
+  --text3:#60584a;
+  --gold:#c9a84c;
+  --gold2:rgba(201,168,76,0.12);
+  --gold3:rgba(201,168,76,0.06);
+  --gold-light:#e8c97a;
+  --card-shadow:0 2px 24px rgba(0,0,0,0.4);
+  --nav-bg:rgba(10,9,6,0.92);
 }
-[data-theme="dark"], .dark {
-  --bg: #0e0d0b;
-  --bg2: #161512;
-  --bg3: #1e1c18;
-  --bg4: #252320;
-  --border: rgba(255,255,255,0.07);
-  --border2: rgba(255,255,255,0.13);
-  --text: #f0ede8;
-  --text2: #a09c96;
-  --text3: #605c58;
-  --accent: #e8763a;
-  --accent2: rgba(232,118,58,0.12);
-  --accent3: rgba(232,118,58,0.06);
-  --blue: #6090e0;
-  --green: #4aaa70;
-  --shadow: rgba(0,0,0,0.3);
-  --shadow2: rgba(0,0,0,0.5);
-  --card-shadow: 0 1px 3px rgba(0,0,0,0.2), 0 4px 16px rgba(0,0,0,0.15);
-  --nav-bg: rgba(14,13,11,0.88);
+[data-theme="light"] {
+  --bg:#faf8f2;
+  --bg2:#ffffff;
+  --bg3:#f3ede0;
+  --bg4:#ece5d2;
+  --border:rgba(150,110,40,0.12);
+  --border2:rgba(150,110,40,0.22);
+  --text:#1a1508;
+  --text2:#6b5e3e;
+  --text3:#a89060;
+  --gold:#9a7428;
+  --gold2:rgba(154,116,40,0.1);
+  --gold3:rgba(154,116,40,0.05);
+  --gold-light:#7a5c18;
+  --card-shadow:0 2px 24px rgba(0,0,0,0.06);
+  --nav-bg:rgba(250,248,242,0.92);
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0e0d0b;
-    --bg2: #161512;
-    --bg3: #1e1c18;
-    --bg4: #252320;
-    --border: rgba(255,255,255,0.07);
-    --border2: rgba(255,255,255,0.13);
-    --text: #f0ede8;
-    --text2: #a09c96;
-    --text3: #605c58;
-    --accent: #e8763a;
-    --accent2: rgba(232,118,58,0.12);
-    --accent3: rgba(232,118,58,0.06);
-    --blue: #6090e0;
-    --green: #4aaa70;
-    --shadow: rgba(0,0,0,0.3);
-    --shadow2: rgba(0,0,0,0.5);
-    --card-shadow: 0 1px 3px rgba(0,0,0,0.2), 0 4px 16px rgba(0,0,0,0.15);
-    --nav-bg: rgba(14,13,11,0.88);
+@media(prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    --bg:#faf8f2;--bg2:#ffffff;--bg3:#f3ede0;--bg4:#ece5d2;
+    --border:rgba(150,110,40,0.12);--border2:rgba(150,110,40,0.22);
+    --text:#1a1508;--text2:#6b5e3e;--text3:#a89060;
+    --gold:#9a7428;--gold2:rgba(154,116,40,0.1);--gold3:rgba(154,116,40,0.05);
+    --gold-light:#7a5c18;--card-shadow:0 2px 24px rgba(0,0,0,0.06);
+    --nav-bg:rgba(250,248,242,0.92);
   }
 }
-
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:16px;line-height:1.6;transition:background .3s,color .3s}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:15px;line-height:1.65;transition:background .3s,color .3s}
 
-/* ── Nav ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--nav-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between}
-.nav-brand{font-family:'Syne',sans-serif;font-weight:700;font-size:18px;letter-spacing:-0.02em;color:var(--text);text-decoration:none}
-.nav-brand span{color:var(--accent)}
-.nav-links{display:flex;align-items:center;gap:24px}
-.nav-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color .2s;font-weight:500;letter-spacing:0.01em}
-.nav-links a:hover{color:var(--text)}
-.nav-right{display:flex;align-items:center;gap:12px}
-.theme-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--border2);background:var(--bg3);color:var(--text2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px;transition:all .2s}
-.theme-btn:hover{background:var(--bg4);color:var(--text)}
-.connect-btn{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;padding:8px 18px;border-radius:999px;border:none;background:var(--accent);color:#fff;cursor:pointer;transition:all .2s;letter-spacing:0.01em}
-.connect-btn:hover{opacity:0.88;transform:translateY(-1px)}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--nav-bg);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 40px}
+.nav-logo{font-family:'Alta Caption',sans-serif;font-size:22px;color:var(--gold-light);text-decoration:none;letter-spacing:0.12em;text-transform:uppercase}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text2);text-decoration:none;transition:color .2s;font-weight:400}
+.nav-links a:hover{color:var(--gold)}
+.nav-right{display:flex;gap:12px;align-items:center}
+.theme-btn{width:34px;height:34px;border-radius:50%;border:1px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.theme-btn:hover{border-color:var(--gold);color:var(--gold)}
+.connect-btn{font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;padding:9px 20px;border-radius:2px;border:1px solid var(--gold);background:transparent;color:var(--gold);cursor:pointer;transition:all .25s}
+.connect-btn:hover{background:var(--gold);color:var(--bg)}
 
-/* ── Hero ── */
-.hero{min-height:100vh;display:flex;align-items:center;padding:80px 24px 60px;max-width:1100px;margin:0 auto}
-.hero-inner{width:100%}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:12px;color:var(--accent);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:28px;padding:6px 14px;border-radius:999px;background:var(--accent2);border:1px solid rgba(200,82,26,0.2)}
-.hero-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
-h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(48px,7vw,88px);line-height:1.0;letter-spacing:-0.03em;margin-bottom:8px}
-h1 .name-accent{color:var(--accent)}
-.hero-tagline{font-family:'Syne',sans-serif;font-size:clamp(18px,2.5vw,26px);font-weight:400;color:var(--text2);line-height:1.3;margin-bottom:32px;max-width:700px;letter-spacing:-0.01em}
-.hero-about{font-size:17px;color:var(--text2);line-height:1.7;max-width:620px;margin-bottom:48px}
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:100px 40px 60px;max-width:1200px;margin:0 auto;position:relative}
+.hero-rule{width:48px;height:1px;background:var(--gold);margin-bottom:40px;opacity:0;animation:fadeIn .8s .2s forwards}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;opacity:0;animation:fadeIn .8s .3s forwards}
+.hero-name-block{margin-bottom:16px;opacity:0;animation:fadeIn .8s .4s forwards}
+.hero-first{font-family:'Alta Caption',sans-serif;font-size:clamp(56px,8vw,110px);font-weight:400;letter-spacing:0.08em;text-transform:uppercase;line-height:0.9;color:var(--text);display:block}
+.hero-last{font-family:'Alta Caption',sans-serif;font-size:clamp(56px,8vw,110px);line-height:0.9;color:var(--gold-light);display:block;margin-left:8px;letter-spacing:0.1em;text-transform:uppercase}
+.hero-tagline{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.2vw,24px);font-weight:300;font-style:italic;color:var(--text2);margin-bottom:36px;max-width:600px;opacity:0;animation:fadeIn .8s .5s forwards;line-height:1.5}
+.hero-divider{display:flex;align-items:center;gap:16px;margin-bottom:32px;opacity:0;animation:fadeIn .8s .55s forwards}
+.hero-divider-line{flex:1;max-width:60px;height:1px;background:var(--border2)}
+.hero-divider-text{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;color:var(--text3);text-transform:uppercase}
+.hero-about{font-size:16px;color:var(--text2);max-width:580px;line-height:1.75;margin-bottom:48px;opacity:0;animation:fadeIn .8s .6s forwards}
 .hero-about strong{color:var(--text);font-weight:500}
-.hero-stats{display:flex;gap:40px;flex-wrap:wrap;margin-bottom:48px;padding:28px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.stat-item{}
-.stat-num{font-family:'Syne',sans-serif;font-size:36px;font-weight:700;color:var(--text);letter-spacing:-0.02em;line-height:1}
-.stat-num span{color:var(--accent)}
-.stat-label{font-size:13px;color:var(--text3);margin-top:4px;font-weight:400}
-.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
-.cta-primary{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;padding:14px 28px;border-radius:999px;border:none;background:var(--accent);color:#fff;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
-.cta-primary:hover{opacity:0.88;transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,82,26,0.3)}
-.cta-secondary{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;padding:14px 28px;border-radius:999px;border:1px solid var(--border2);background:transparent;color:var(--text);cursor:pointer;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
-.cta-secondary:hover{background:var(--bg3);transform:translateY(-2px)}
-.hero-scroll{margin-top:60px;display:flex;align-items:center;gap:10px;color:var(--text3);font-size:13px;font-family:'DM Mono',monospace;letter-spacing:0.04em}
-.scroll-line{width:40px;height:1px;background:var(--text3)}
 
-/* ── Sections ── */
-section{padding:80px 24px;max-width:1100px;margin:0 auto}
-.section-header{margin-bottom:52px}
-.section-label{font-family:'DM Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px;display:block}
-h2{font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:-0.02em;line-height:1.1}
-.section-sub{font-size:16px;color:var(--text2);margin-top:12px;max-width:520px;line-height:1.6}
+/* Stats bar */
+.stats-bar{display:flex;gap:0;margin-bottom:52px;border:1px solid var(--border);border-radius:2px;overflow:hidden;opacity:0;animation:fadeIn .8s .7s forwards}
+.stat-cell{flex:1;padding:20px 24px;border-right:1px solid var(--border);text-align:center}
+.stat-cell:last-child{border-right:none}
+.stat-n{font-family:'Alta Caption',sans-serif;font-size:28px;letter-spacing:0.06em;color:var(--gold);line-height:1}
+.stat-l{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;color:var(--text3);text-transform:uppercase;margin-top:6px}
 
-/* ── Pillars ── */
-.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:0}
-.pillar{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:28px;transition:border-color .2s,transform .2s;box-shadow:var(--card-shadow)}
-.pillar:hover{border-color:var(--border2);transform:translateY(-2px)}
-.pillar-icon{width:44px;height:44px;border-radius:12px;background:var(--accent2);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:18px;border:1px solid rgba(200,82,26,0.15)}
-.pillar h3{font-family:'Syne',sans-serif;font-size:17px;font-weight:600;margin-bottom:8px;letter-spacing:-0.01em}
-.pillar p{font-size:14px;color:var(--text2);line-height:1.6}
+/* CTAs */
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:fadeIn .8s .8s forwards}
+.cta-gold{font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;padding:14px 32px;border-radius:2px;border:none;background:var(--gold);color:var(--bg);cursor:pointer;transition:all .25s;font-weight:500}
+.cta-gold:hover{background:var(--gold-light);transform:translateY(-2px)}
+.cta-outline{font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;padding:14px 32px;border-radius:2px;border:1px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;transition:all .25s;text-decoration:none;display:inline-flex;align-items:center}
+.cta-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
 
-/* ── Experience ── */
-.exp-timeline{position:relative}
-.exp-item{display:grid;grid-template-columns:140px 1fr;gap:32px;margin-bottom:48px;position:relative}
-.exp-item:not(:last-child)::after{content:'';position:absolute;left:139px;top:28px;bottom:-28px;width:1px;background:var(--border)}
-.exp-date{padding-top:4px}
-.exp-date-range{font-family:'DM Mono',monospace;font-size:11px;color:var(--text3);letter-spacing:0.04em;line-height:1.4}
-.exp-date-dur{font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);margin-top:4px;padding:2px 8px;border-radius:999px;border:1px solid var(--border);display:inline-block}
-.exp-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:24px 28px;box-shadow:var(--card-shadow);transition:border-color .2s}
-.exp-card:hover{border-color:var(--border2)}
-.exp-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:4px}
-.exp-role{font-family:'Syne',sans-serif;font-size:17px;font-weight:600;letter-spacing:-0.01em}
-.exp-badge{font-family:'DM Mono',monospace;font-size:10px;padding:3px 10px;border-radius:999px;border:1px solid var(--border);color:var(--text3);white-space:nowrap;flex-shrink:0}
-.exp-badge.current{background:var(--accent2);border-color:rgba(200,82,26,0.25);color:var(--accent)}
-.exp-company{font-size:14px;color:var(--text2);margin-bottom:4px;font-weight:500}
-.exp-location{font-family:'DM Mono',monospace;font-size:11px;color:var(--text3);margin-bottom:16px}
-.exp-summary{font-size:14px;color:var(--text2);line-height:1.65;margin-bottom:14px}
+@keyframes fadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* SECTION SYSTEM */
+.full-w{border-top:1px solid var(--border)}
+section{max-width:1200px;margin:0 auto;padding:80px 40px}
+.sec-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:10px}
+h2{font-family:'Alta Caption',sans-serif;font-size:clamp(28px,4vw,52px);font-weight:400;letter-spacing:0.08em;text-transform:uppercase;line-height:1;color:var(--text)}
+h2 em{font-family:'Alta Caption',sans-serif;font-size:1em;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold-light);font-style:normal}
+.sec-sub{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:var(--text2);margin-top:10px;font-weight:300}
+
+/* PILLARS */
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-top:48px}
+.pillar{background:var(--bg);padding:32px;transition:background .2s}
+.pillar:hover{background:var(--bg2)}
+.pillar-num{font-family:'Alta Caption',sans-serif;font-size:48px;color:var(--border2);letter-spacing:0.06em;line-height:1;margin-bottom:16px}
+.pillar h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--text);margin-bottom:10px;line-height:1.3}
+.pillar p{font-size:14px;color:var(--text2);line-height:1.65}
+
+/* IMPACT */
+.impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-top:48px}
+.impact-cell{background:var(--bg);padding:32px 24px;text-align:center;transition:background .2s}
+.impact-cell:hover{background:var(--bg2)}
+.impact-n{font-family:'Alta Caption',sans-serif;font-size:42px;letter-spacing:0.06em;color:var(--gold);line-height:1}
+.impact-d{font-size:13px;color:var(--text2);margin-top:8px;line-height:1.4}
+.impact-c{font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);margin-top:6px;letter-spacing:0.06em}
+
+/* EXPERIENCE */
+.exp-list{margin-top:48px}
+.exp-row{display:grid;grid-template-columns:180px 1fr;gap:40px;padding:36px 0;border-bottom:1px solid var(--border)}
+.exp-row:first-child{border-top:1px solid var(--border)}
+.exp-meta{}
+.exp-period{font-family:'DM Mono',monospace;font-size:11px;color:var(--text3);letter-spacing:0.06em;line-height:1.5}
+.exp-dur{font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);margin-top:6px;padding:3px 10px;border:1px solid var(--border2);border-radius:2px;display:inline-block;letter-spacing:0.06em}
+.exp-content{}
+.exp-role{font-family:'Alta Caption',sans-serif;font-size:18px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:3px}
+.exp-company{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--gold);margin-bottom:3px}
+.exp-loc{font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);letter-spacing:0.06em;margin-bottom:14px}
+.exp-summary{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:14px}
 .exp-bullets{list-style:none}
-.exp-bullets li{font-size:14px;color:var(--text2);line-height:1.6;padding:5px 0 5px 18px;position:relative;border-top:1px solid var(--border)}
-.exp-bullets li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:12px;top:6px}
-.exp-bullets li:first-child{border-top:none}
-.exp-tag-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
-.exp-tag{font-family:'DM Mono',monospace;font-size:10px;padding:3px 9px;border-radius:999px;border:1px solid var(--border);color:var(--text3);background:var(--bg3)}
+.exp-bullets li{font-size:13px;color:var(--text2);line-height:1.65;padding:4px 0 4px 20px;position:relative}
+.exp-bullets li::before{content:'—';position:absolute;left:0;color:var(--gold);font-size:11px}
+.exp-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.exp-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.06em;padding:3px 10px;border:1px solid var(--border);color:var(--text3);border-radius:2px}
+.badge-active{background:var(--gold2);border-color:var(--border2);color:var(--gold);font-family:'DM Mono',monospace;font-size:10px;padding:3px 10px;border-radius:2px;border-width:1px;border-style:solid}
 
-/* ── Skills ── */
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.skill-group{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:22px;box-shadow:var(--card-shadow)}
-.skill-group-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:14px;display:block}
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-top:48px}
+.skill-block{background:var(--bg);padding:28px}
+.skill-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block}
 .skill-tags{display:flex;flex-wrap:wrap;gap:6px}
-.skill-tag{font-size:13px;padding:5px 12px;border-radius:999px;border:1px solid var(--border);color:var(--text2);background:var(--bg3);transition:all .15s}
-.skill-tag:hover{border-color:var(--accent);color:var(--accent);background:var(--accent2)}
+.skill-tag{font-size:13px;padding:5px 12px;border:1px solid var(--border);color:var(--text2);border-radius:2px;transition:all .15s;cursor:default}
+.skill-tag:hover{border-color:var(--gold);color:var(--gold)}
 
-/* ── Impact numbers ── */
-.impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
-.impact-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:28px 24px;text-align:center;box-shadow:var(--card-shadow);transition:transform .2s,border-color .2s}
-.impact-card:hover{transform:translateY(-3px);border-color:var(--border2)}
-.impact-num{font-family:'Syne',sans-serif;font-size:40px;font-weight:800;color:var(--accent);letter-spacing:-0.03em;line-height:1}
-.impact-desc{font-size:13px;color:var(--text2);margin-top:8px;line-height:1.4}
-.impact-ctx{font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);margin-top:6px}
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
+.footer-logo{font-family:'Alta Caption',sans-serif;font-size:28px;color:var(--gold-light);margin-bottom:8px;letter-spacing:0.14em;text-transform:uppercase}
+.footer-line{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;color:var(--text3);text-transform:uppercase;margin-bottom:24px}
+.footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:24px}
+.footer-links a{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text2);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);letter-spacing:0.06em}
 
-/* ── What I build ── */
-.build-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-.build-item{padding:20px;border-radius:12px;background:var(--bg3);border:1px solid var(--border);transition:all .2s}
-.build-item:hover{background:var(--bg4);border-color:var(--border2)}
-.build-emoji{font-size:22px;margin-bottom:10px;display:block}
-.build-title{font-size:14px;font-weight:500;color:var(--text);margin-bottom:4px}
-.build-desc{font-size:13px;color:var(--text2);line-height:1.5}
-
-/* ── Footer ── */
-footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center}
-.footer-inner{max-width:1100px;margin:0 auto}
-.footer-name{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:var(--text);margin-bottom:8px}
-.footer-tagline{font-size:14px;color:var(--text3);margin-bottom:24px}
-.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:24px}
-.footer-links a{font-size:13px;color:var(--text2);text-decoration:none;transition:color .2s}
-.footer-links a:hover{color:var(--accent)}
-.footer-copy{font-family:'DM Mono',monospace;font-size:11px;color:var(--text3)}
-
-/* ── Contact Popup ── */
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:200;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s;backdrop-filter:blur(4px);padding:20px}
+/* POPUP */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:200;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s;backdrop-filter:blur(6px);padding:20px}
 .overlay.open{opacity:1;pointer-events:all}
-.popup{background:var(--bg2);border:1px solid var(--border2);border-radius:20px;padding:36px;max-width:400px;width:100%;transform:translateY(20px) scale(0.97);transition:transform .25s;box-shadow:0 24px 80px rgba(0,0,0,0.2)}
-.overlay.open .popup{transform:translateY(0) scale(1)}
-.popup-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px}
-.popup-title{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;letter-spacing:-0.02em}
-.popup-sub{font-size:14px;color:var(--text2);margin-top:4px}
-.popup-close{width:32px;height:32px;border-radius:50%;border:1px solid var(--border2);background:var(--bg3);color:var(--text2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;transition:all .15s;flex-shrink:0}
-.popup-close:hover{background:var(--bg4);color:var(--text)}
-.contact-options{display:flex;flex-direction:column;gap:10px}
-.contact-opt{display:flex;align-items:center;gap:16px;padding:16px 20px;border-radius:12px;border:1px solid var(--border);background:var(--bg3);cursor:pointer;text-decoration:none;transition:all .2s;color:var(--text)}
-.contact-opt:hover{border-color:var(--border2);background:var(--bg4);transform:translateX(4px)}
-.contact-opt.primary{background:var(--accent);border-color:var(--accent);color:#fff}
-.contact-opt.primary:hover{opacity:0.9;transform:translateX(4px)}
-.opt-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;background:rgba(255,255,255,0.15)}
-.contact-opt:not(.primary) .opt-icon{background:var(--bg4)}
-.opt-label{font-size:14px;font-weight:500}
-.opt-value{font-size:13px;opacity:0.7;margin-top:2px}
-.opt-action{margin-left:auto;font-size:11px;font-family:'DM Mono',monospace;opacity:0.6}
-.copied{display:none;font-size:11px;color:var(--green);font-family:'DM Mono',monospace;text-align:center;margin-top:12px}
+.popup{background:var(--bg2);border:1px solid var(--border2);padding:40px;max-width:420px;width:100%;transform:translateY(20px);transition:transform .25s;box-shadow:0 32px 80px rgba(0,0,0,0.5)}
+.overlay.open .popup{transform:none}
+.popup-title{font-family:'Alta Caption',sans-serif;font-size:24px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);margin-bottom:4px}
+.popup-title em{font-family:'Alta Caption',sans-serif;font-size:1em;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold-light);font-style:normal}
+.popup-sub{font-size:13px;color:var(--text3);margin-bottom:28px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px}
+.popup-close{position:absolute;top:20px;right:20px;width:32px;height:32px;border:1px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.popup-close:hover{border-color:var(--gold);color:var(--gold)}
+.popup{position:relative}
+.contact-opts{display:flex;flex-direction:column;gap:8px}
+.contact-opt{display:flex;align-items:center;gap:16px;padding:15px 18px;border:1px solid var(--border);background:transparent;cursor:pointer;text-decoration:none;transition:all .2s;color:var(--text)}
+.contact-opt:hover{border-color:var(--gold);background:var(--gold2)}
+.contact-opt.gold-opt{background:var(--gold);border-color:var(--gold);color:var(--bg)}
+.contact-opt.gold-opt:hover{background:var(--gold-light);border-color:var(--gold-light)}
+.opt-ic{font-size:18px;flex-shrink:0;width:32px;text-align:center}
+.opt-lbl{font-size:13px;font-weight:500;letter-spacing:0.04em}
+.opt-val{font-size:12px;opacity:0.6;margin-top:1px;font-family:'DM Mono',monospace}
+.opt-arr{margin-left:auto;font-size:12px;opacity:0.5;font-family:'DM Mono',monospace}
+.copied{display:none;font-size:11px;color:var(--gold);font-family:'DM Mono',monospace;text-align:center;margin-top:10px;letter-spacing:0.06em}
 .copied.show{display:block}
 
-/* ── Dividers ── */
-.full-section{border-top:1px solid var(--border)}
+/* FLOATING RESUME BUTTON */
+.resume-fab{position:fixed;bottom:28px;right:28px;z-index:150;display:flex;align-items:center;gap:10px;background:var(--gold);color:var(--bg);padding:14px 20px;border-radius:2px;text-decoration:none;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;box-shadow:0 4px 24px rgba(0,0,0,0.35);transition:all .25s;border:none;cursor:pointer}
+.resume-fab:hover{background:var(--gold-light);transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,0.45)}
+.resume-fab svg{width:15px;height:15px;flex-shrink:0}
+@media(max-width:768px){.resume-fab{bottom:20px;right:16px;padding:12px 16px;font-size:10px}}
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity .65s,transform .65s}
+.fade-up.visible{opacity:1;transform:none}
 
-/* ── Responsive ── */
 @media(max-width:768px){
+  nav{padding:0 20px}
+  .hero,.section{padding-left:20px;padding-right:20px}
+  section{padding:60px 20px}
+  .exp-row{grid-template-columns:1fr;gap:12px}
   .nav-links{display:none}
-  .exp-item{grid-template-columns:1fr;gap:8px}
-  .exp-item::after{display:none}
-  .exp-date{display:flex;gap:10px;align-items:center}
-  .hero-stats{gap:24px}
-  h1{font-size:40px}
+  .stats-bar{flex-wrap:wrap}
+  .stat-cell{min-width:50%}
 }
-
-/* ── Animate in ── */
-.fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
-.fade-up.visible{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <a class="nav-brand" href="#">HS<span>.</span></a>
+  <a class="nav-logo" href="#">Harshit</a>
   <div class="nav-links">
     <a href="#about">About</a>
-    <a href="#experience">Experience</a>
     <a href="#impact">Impact</a>
+    <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
   </div>
   <div class="nav-right">
-    <button class="theme-btn" onclick="toggleTheme()" title="Toggle theme" id="themeBtn">🌙</button>
+    <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">☀️</button>
     <button class="connect-btn" onclick="openConnect()">Let's Connect</button>
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
-  <div class="hero-inner">
-    <div class="hero-eyebrow fade-up">
-      <span class="hero-dot"></span>
-      Open to new opportunities
-    </div>
-    <h1 class="fade-up">Harshit<br><span class="name-accent">Soni.</span></h1>
-    <div class="hero-tagline fade-up">Operations & Project Leadership<br>that actually ships.</div>
-    <div class="hero-about fade-up">
-      I'm the person who makes sure <strong>things get done</strong> — and done right. Over <strong>7+ years</strong> across luxury manufacturing, retail, and service businesses, I've built execution systems that teams follow, give leadership real visibility, and hold up when complexity increases.
-    </div>
-    <div class="hero-stats fade-up">
-      <div class="stat-item">
-        <div class="stat-num">7<span>+</span></div>
-        <div class="stat-label">Years of experience</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">6<span>×</span></div>
-        <div class="stat-label">Delivery volume scaled at Spinny</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">130<span>%</span></div>
-        <div class="stat-label">Sales growth contributed at WoodenStreet</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">~70<span>%</span></div>
-        <div class="stat-label">Manual effort reduced via SOPs at I.EVO</div>
-      </div>
-    </div>
-    <div class="hero-ctas fade-up">
-      <button class="cta-primary" onclick="openConnect()">Let's Connect →</button>
-      <a class="cta-secondary" href="https://linkedin.com/in/harshtsoni" target="_blank">View LinkedIn ↗</a>
-    </div>
-    <div class="hero-scroll fade-up">
-      <div class="scroll-line"></div>
-      scroll to explore
-    </div>
+  <div class="hero-rule"></div>
+  <div class="hero-eyebrow">Operations & Project Leadership · Open to opportunities</div>
+  <div class="hero-name-block">
+    <span class="hero-first">Harshit</span>
+    <span class="hero-last">Soni.</span>
+  </div>
+  <div class="hero-tagline">Building execution systems that scale — across manufacturing, retail, and growth-stage businesses.</div>
+  <div class="hero-divider">
+    <div class="hero-divider-line"></div>
+    <div class="hero-divider-text">7+ years · Udaipur, India</div>
+    <div class="hero-divider-line"></div>
+  </div>
+  <div class="hero-about">
+    I'm the person who makes sure <strong>things actually get done.</strong> When a client orders bespoke furniture for a hospitality project, they shouldn't have to worry about timelines, quality, or whether the design intent survived manufacturing. <strong>That's my job.</strong>
+  </div>
+  <div class="stats-bar">
+    <div class="stat-cell"><div class="stat-n">7+</div><div class="stat-l">Years</div></div>
+    <div class="stat-cell"><div class="stat-n">6×</div><div class="stat-l">Delivery scale</div></div>
+    <div class="stat-cell"><div class="stat-n">130%</div><div class="stat-l">Sales growth</div></div>
+    <div class="stat-cell"><div class="stat-n">~70%</div><div class="stat-l">Effort reduced</div></div>
+    <div class="stat-cell"><div class="stat-n">PAN 🇮🇳</div><div class="stat-l">Framework reach</div></div>
+  </div>
+  <div class="hero-ctas">
+    <button class="cta-gold" onclick="openConnect()">Let's Connect</button>
+    <a class="cta-outline" href="https://linkedin.com/in/harshtsoni" target="_blank">LinkedIn ↗</a>
   </div>
 </div>
 
 <!-- ABOUT -->
-<div class="full-section" id="about">
+<div class="full-w" id="about">
 <section>
   <div class="section-header fade-up">
-    <span class="section-label">About</span>
-    <h2>Three things I do<br>in every role.</h2>
+    <span class="sec-label">The standard</span>
+    <h2>Three things, <em>every</em> role.</h2>
   </div>
   <div class="pillars">
     <div class="pillar fade-up">
-      <div class="pillar-icon">🏗️</div>
-      <h3>Leave operations more structured</h3>
-      <p>A delivery framework I built at Spinny went PAN India. At I.EVO, I rebuilt the PM team's entire execution model. At WoodenStreet, operations contributed to 130% sales growth. I don't just manage — I build.</p>
+      <div class="pillar-num">01</div>
+      <h3>Leave operations more structured than I found them</h3>
+      <p>A delivery framework built at Spinny went PAN India. At I.EVO, I rebuilt the PM team's entire execution model. At WoodenStreet, operations contributed to 130% sales growth. I don't just manage — I build.</p>
     </div>
     <div class="pillar fade-up">
-      <div class="pillar-icon">🌱</div>
+      <div class="pillar-num">02</div>
       <h3>Grow the people around me</h3>
-      <p>I build team capability, not just manage headcount. I've trained teams from scratch, handed over fully functioning operations, and been promoted twice in two years — by making the teams around me stronger.</p>
+      <p>I build team capability, not just manage headcount. Trained teams from scratch, handed over fully functioning operations, and been promoted twice in two years — by making the teams around me stronger.</p>
     </div>
     <div class="pillar fade-up">
-      <div class="pillar-icon">🛡️</div>
+      <div class="pillar-num">03</div>
       <h3>Never let a business take a loss</h3>
-      <p>Due to my negligence — a standard I've held from day one. Whether it's fiscal discipline, delivery risk, or supply chain accountability, I treat the business's money like my own.</p>
+      <p>Due to my negligence — a standard held from day one. Whether it's fiscal discipline, delivery risk, or supply chain accountability, I treat the business's money and reputation like my own.</p>
     </div>
   </div>
-  <div style="margin-top:40px;padding:28px 32px;background:var(--accent2);border:1px solid rgba(200,82,26,0.2);border-radius:16px;" class="fade-up">
-    <p style="font-size:16px;color:var(--text);line-height:1.7;font-style:italic;">"I thrive in founder-led, growth-stage environments where systems need to match ambition. If that sounds like your business — <strong>let's talk.</strong>"</p>
-  </div>
-</section>
-</div>
-
-<!-- WHAT I BUILD -->
-<div class="full-section">
-<section>
-  <div class="section-header fade-up">
-    <span class="section-label">Capabilities</span>
-    <h2>What I actually build.</h2>
-    <p class="section-sub">Not job titles — real deliverables I've shipped across organizations.</p>
-  </div>
-  <div class="build-grid">
-    <div class="build-item fade-up"><span class="build-emoji">⚙️</span><div class="build-title">Operating Systems</div><div class="build-desc">End-to-end frameworks covering lead → planning → production → delivery → handover.</div></div>
-    <div class="build-item fade-up"><span class="build-emoji">📊</span><div class="build-title">Productivity Dashboards</div><div class="build-desc">Real-time visibility tools that bridge hub operations with leadership decisions.</div></div>
-    <div class="build-item fade-up"><span class="build-emoji">📋</span><div class="build-title">SOPs & Governance</div><div class="build-desc">Standard operating procedures that teams actually follow — auditable, scalable, clear.</div></div>
-    <div class="build-item fade-up"><span class="build-emoji">🏭</span><div class="build-title">Production Workflows</div><div class="build-desc">Manufacturing coordination systems with daily tracking and bottleneck alerts.</div></div>
-    <div class="build-item fade-up"><span class="build-emoji">🔗</span><div class="build-title">Supply Chain Systems</div><div class="build-desc">Vendor evaluation, procurement workflows, inventory controls with audit readiness.</div></div>
-    <div class="build-item fade-up"><span class="build-emoji">👥</span><div class="build-title">Cross-functional Teams</div><div class="build-desc">Aligned project, production, finance, and client teams around shared delivery goals.</div></div>
-    <div class="build-item fade-up"><span class="build-emoji">💰</span><div class="build-title">Budget & BOQ Control</div><div class="build-desc">Cost structure analysis, BOQ-based project budgeting, strict OpEx discipline.</div></div>
-    <div class="build-item fade-up"><span class="build-emoji">🚀</span><div class="build-title">Delivery Frameworks</div><div class="build-desc">Logistics and delivery operations that scale — from 50 to 1,000+ monthly units.</div></div>
+  <div style="margin-top:48px;padding:36px 40px;border:1px solid var(--border2);background:var(--gold2)" class="fade-up">
+    <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;font-style:italic;color:var(--text);line-height:1.6">"I thrive in founder-led, growth-stage environments where systems need to match ambition. If that sounds like your business — let's talk."</p>
   </div>
 </section>
 </div>
 
 <!-- IMPACT -->
-<div class="full-section" id="impact">
+<div class="full-w" id="impact">
 <section>
   <div class="section-header fade-up">
-    <span class="section-label">Impact</span>
-    <h2>Numbers that matter.</h2>
-    <p class="section-sub">Outcomes from the work — not responsibilities from the JD.</p>
+    <span class="sec-label">Results</span>
+    <h2>Numbers that <em>matter.</em></h2>
+    <p class="sec-sub">Outcomes from the work — not responsibilities from the JD.</p>
   </div>
   <div class="impact-grid">
-    <div class="impact-card fade-up">
-      <div class="impact-num">6×</div>
-      <div class="impact-desc">Home delivery volume growth at Spinny NCR</div>
-      <div class="impact-ctx">50 → 300 units/month</div>
-    </div>
-    <div class="impact-card fade-up">
-      <div class="impact-num">1K+</div>
-      <div class="impact-desc">Monthly deliveries achieved by Dec 2022</div>
-      <div class="impact-ctx">Spinny · NCR region</div>
-    </div>
-    <div class="impact-card fade-up">
-      <div class="impact-num">130%</div>
-      <div class="impact-desc">Sales growth contributed as Operations Manager</div>
-      <div class="impact-ctx">WoodenStreet · Pan-India retail</div>
-    </div>
-    <div class="impact-card fade-up">
-      <div class="impact-num">~70%</div>
-      <div class="impact-desc">Reduction in manual effort via product standardization</div>
-      <div class="impact-ctx">I.EVO · PM team SOPs</div>
-    </div>
-    <div class="impact-card fade-up">
-      <div class="impact-num">100%</div>
-      <div class="impact-desc">Fiscal discipline on store-level OpEx</div>
-      <div class="impact-ctx">WoodenStreet · multi-city</div>
-    </div>
-    <div class="impact-card fade-up">
-      <div class="impact-num">PAN 🇮🇳</div>
-      <div class="impact-desc">Delivery framework rolled out nationwide</div>
-      <div class="impact-ctx">Spinny · built from scratch</div>
-    </div>
-    <div class="impact-card fade-up">
-      <div class="impact-num">2×</div>
-      <div class="impact-desc">Promoted in 2 years at Spinny</div>
-      <div class="impact-ctx">Analyst → Manager → Asst. Ops Head</div>
-    </div>
-    <div class="impact-card fade-up">
-      <div class="impact-num">45%</div>
-      <div class="impact-desc">Premium deliveries via flatbed trucks</div>
-      <div class="impact-ctx">Spinny · customer satisfaction uplift</div>
-    </div>
+    <div class="impact-cell fade-up"><div class="impact-n">6×</div><div class="impact-d">Home delivery volume growth at Spinny NCR</div><div class="impact-c">50 → 300 units/month</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">1K+</div><div class="impact-d">Monthly deliveries achieved by Dec 2022</div><div class="impact-c">NCR region · Spinny</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">130%</div><div class="impact-d">Sales growth as Operations Manager</div><div class="impact-c">WoodenStreet · Pan-India</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">~70%</div><div class="impact-d">Manual effort reduced via product standardization</div><div class="impact-c">I.EVO · PM team SOPs</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">100%</div><div class="impact-d">Fiscal discipline on store-level OpEx</div><div class="impact-c">WoodenStreet · multi-city</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">2×</div><div class="impact-d">Promoted in 2 years at Spinny</div><div class="impact-c">Analyst → Manager → Asst. Ops Head</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">PAN🇮🇳</div><div class="impact-d">Delivery framework rolled out nationwide</div><div class="impact-c">Built from scratch · Spinny</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">45%</div><div class="impact-d">Premium deliveries via flatbed trucks</div><div class="impact-c">Customer satisfaction uplift</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">~90%</div><div class="impact-d">Manual reconciliation effort eliminated</div><div class="impact-c">Store–Inventory–Accounts system · Arten Space</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">180 hrs</div><div class="impact-d">Saved per month via process automation</div><div class="impact-c">Executive capacity freed · Arten Space</div></div>
   </div>
 </section>
 </div>
 
 <!-- EXPERIENCE -->
-<div class="full-section" id="experience">
+<div class="full-w" id="experience">
 <section>
   <div class="section-header fade-up">
-    <span class="section-label">Experience</span>
-    <h2>7+ years of building<br>things that work.</h2>
+    <span class="sec-label">Career</span>
+    <h2>Seven years of <em>building.</em></h2>
   </div>
-  <div class="exp-timeline">
+  <div class="exp-list">
 
-    <!-- Arten Space -->
-    <div class="exp-item fade-up">
-      <div class="exp-date">
-        <div class="exp-date-range">Dec 2025<br>Present</div>
-        <div class="exp-date-dur">Current</div>
+    <div class="exp-row fade-up">
+      <div class="exp-meta">
+        <div class="exp-period">Dec 2025<br>Present</div>
+        <div class="exp-dur">● Current</div>
       </div>
-      <div class="exp-card">
-        <div class="exp-header">
-          <div class="exp-role">Project Management Consultant</div>
-          <span class="exp-badge current">● Active</span>
-        </div>
+      <div class="exp-content">
+        <div class="exp-role">Project Management Consultant</div>
         <div class="exp-company">Arten Space</div>
-        <div class="exp-location">Udaipur, Rajasthan · Advisory</div>
-        <div class="exp-summary">Brought in to build the operating model from scratch — role evolved into general management advisory spanning marketing, HR, inventory, and operations leadership.</div>
+        <div class="exp-loc">Udaipur, Rajasthan · Advisory</div>
+        <div class="exp-summary">Brought in to build the operating model from scratch — evolved into general management advisory across marketing, HR, inventory, and operations.</div>
         <ul class="exp-bullets">
-          <li>Designed end-to-end operating system covering lead conversion, projects, manufacturing, delivery, and final handover</li>
-          <li>Implemented HR policies, leave systems, and governance frameworks for the organization</li>
+          <li>Designed end-to-end operating system: lead conversion → projects → manufacturing → delivery → handover</li>
+          <li>Implemented HR policies, leave systems, and governance frameworks</li>
           <li>Built Tally-compatible inventory system with audit controls and requisition workflows</li>
-          <li>Established daily production productivity tracking and performance visibility for leadership</li>
+          <li>Established daily production tracking and performance visibility for leadership</li>
+          <li>Built an integrated store–inventory–accounts transaction system that eliminated ~90% of manual reconciliation effort — freeing executives from backlog-generating admin work and redeploying them onto audits and higher-value tasks; saving ~180 working hours per month</li>
+          <li>Digitized production workflows end-to-end, replacing handwritten material requisition tokens with structured digital processes — eliminating daily manhour losses, enabling redeployment of Data Entry &amp; MIS staff into critical operations, and reducing overhead costs</li>
         </ul>
-        <div class="exp-tag-row">
-          <span class="exp-tag">General Management</span>
-          <span class="exp-tag">Operating Systems</span>
-          <span class="exp-tag">Governance</span>
-          <span class="exp-tag">Inventory</span>
-        </div>
+        <div class="exp-tags"><span class="exp-tag">General Management</span><span class="exp-tag">Operating Systems</span><span class="exp-tag">Governance</span><span class="exp-tag">Inventory</span><span class="exp-tag">Process Automation</span></div>
       </div>
     </div>
 
-    <!-- Wood Couture -->
-    <div class="exp-item fade-up">
-      <div class="exp-date">
-        <div class="exp-date-range">Aug 2025<br>Dec 2025</div>
-        <div class="exp-date-dur">5 months</div>
+    <div class="exp-row fade-up">
+      <div class="exp-meta">
+        <div class="exp-period">Aug 2025<br>Dec 2025</div>
+        <div class="exp-dur">5 months</div>
       </div>
-      <div class="exp-card">
-        <div class="exp-header">
-          <div class="exp-role">Project Manager</div>
-          <span class="exp-badge">Full-time</span>
-        </div>
+      <div class="exp-content">
+        <div class="exp-role">Project Manager</div>
         <div class="exp-company">Wood Couture</div>
-        <div class="exp-location">Hyderabad, Telangana · Hybrid</div>
-        <div class="exp-summary">Delivered end-to-end bespoke furniture and FF&E projects for high-value hospitality and residential clients — managing scope, vendors, budgets, and on-site installation.</div>
+        <div class="exp-loc">Hyderabad, Telangana · Hybrid</div>
+        <div class="exp-summary">End-to-end bespoke furniture and FF&E projects for high-value hospitality and residential clients.</div>
         <ul class="exp-bullets">
           <li>Managed vendor relationships — evaluating manufacturing partners on technical capacity and delivery reliability</li>
-          <li>Controlled project budgets through detailed BOQ analysis, keeping costs within scope without compromising design intent</li>
-          <li>Orchestrated workflows across designers, clients, logistics teams, and site contractors to ensure on-time delivery</li>
+          <li>Controlled project budgets via detailed BOQ analysis, keeping costs within scope without compromising design intent</li>
+          <li>Orchestrated workflows across designers, clients, logistics teams, and site contractors</li>
         </ul>
-        <div class="exp-tag-row">
-          <span class="exp-tag">FF&E Projects</span>
-          <span class="exp-tag">BOQ Management</span>
-          <span class="exp-tag">Vendor Management</span>
-          <span class="exp-tag">Site Coordination</span>
-        </div>
+        <div class="exp-tags"><span class="exp-tag">FF&E</span><span class="exp-tag">BOQ</span><span class="exp-tag">Vendor Management</span><span class="exp-tag">Site Coordination</span></div>
       </div>
     </div>
 
-    <!-- I.EVO -->
-    <div class="exp-item fade-up">
-      <div class="exp-date">
-        <div class="exp-date-range">Feb 2024<br>Aug 2025</div>
-        <div class="exp-date-dur">1 yr 7 mos</div>
+    <div class="exp-row fade-up">
+      <div class="exp-meta">
+        <div class="exp-period">Feb 2024<br>Aug 2025</div>
+        <div class="exp-dur">1 yr 7 mos</div>
       </div>
-      <div class="exp-card">
-        <div class="exp-header">
-          <div class="exp-role">Operations Manager</div>
-          <span class="exp-badge">Full-time</span>
-        </div>
-        <div class="exp-company">I.EVO — Contractual & Bespoke Furniture</div>
-        <div class="exp-location">Udaipur, Rajasthan · On-site</div>
-        <div class="exp-summary">Joined a growing bespoke furniture manufacturer to build operational structure from the ground up — redesigning how project, production, and supply chain teams worked together.</div>
+      <div class="exp-content">
+        <div class="exp-role">Operations Manager</div>
+        <div class="exp-company">I.EVO — Bespoke Furniture</div>
+        <div class="exp-loc">Udaipur, Rajasthan · On-site</div>
+        <div class="exp-summary">Built operational structure from the ground up — redesigning how project, production, and supply chain teams worked together.</div>
         <ul class="exp-bullets">
-          <li>Built comprehensive SOPs and standardized product libraries, reducing manual effort in client appraisals by ~70%</li>
-          <li>Established centralized project tracking and daily cross-vertical reviews for real-time delivery risk visibility</li>
-          <li>Deployed end-to-end inventory and procurement workflows with audit controls, improving supply chain accountability</li>
-          <li>Directed PM team execution strategy, aligning manufacturing capabilities with client deliverables across simultaneous projects</li>
+          <li>Built SOPs and standardized product libraries, reducing manual effort in client appraisals by ~70%</li>
+          <li>Established centralized project tracking and daily cross-vertical reviews for delivery risk visibility</li>
+          <li>Deployed inventory and procurement workflows with audit controls</li>
+          <li>Directed PM team execution strategy across multiple simultaneous projects</li>
         </ul>
-        <div class="exp-tag-row">
-          <span class="exp-tag">SOPs</span>
-          <span class="exp-tag">Project Tracking</span>
-          <span class="exp-tag">Inventory Systems</span>
-          <span class="exp-tag">PM Governance</span>
-        </div>
+        <div class="exp-tags"><span class="exp-tag">SOPs</span><span class="exp-tag">Project Tracking</span><span class="exp-tag">Inventory</span><span class="exp-tag">PM Governance</span></div>
       </div>
     </div>
 
-    <!-- WoodenStreet -->
-    <div class="exp-item fade-up">
-      <div class="exp-date">
-        <div class="exp-date-range">Feb 2023<br>Jan 2024</div>
-        <div class="exp-date-dur">1 year</div>
+    <div class="exp-row fade-up">
+      <div class="exp-meta">
+        <div class="exp-period">Feb 2023<br>Jan 2024</div>
+        <div class="exp-dur">1 year</div>
       </div>
-      <div class="exp-card">
-        <div class="exp-header">
-          <div class="exp-role">Operations Manager</div>
-          <span class="exp-badge">Full-time</span>
-        </div>
+      <div class="exp-content">
+        <div class="exp-role">Operations Manager</div>
         <div class="exp-company">WoodenStreet</div>
-        <div class="exp-location">Udaipur, Rajasthan · Pan-India</div>
-        <div class="exp-summary">Managed pan-India retail operations as the executive bridge between CEO and store teams — translating corporate strategy into ground-level execution across multiple cities, contributing to 130% sales growth.</div>
+        <div class="exp-loc">Udaipur · Pan-India retail</div>
+        <div class="exp-summary">Executive bridge between CEO and store teams — translating corporate strategy into ground-level execution across multiple cities, contributing to 130% sales growth.</div>
         <ul class="exp-bullets">
-          <li>Initiated B2B collaborations with architects and developers to generate new business pipelines during low-footfall periods</li>
-          <li>Established SOPs and conducted random store audits for brand consistency and compliance across regions</li>
-          <li>Implemented strict OpEx controls at store level, achieving 100% fiscal discipline on petty cash and recurring expenses</li>
-          <li>Facilitated multi-city town halls to drive knowledge sharing and maximize team productivity</li>
+          <li>Initiated B2B collaborations with architects and developers for new business pipelines</li>
+          <li>Established SOPs and conducted random store audits for brand consistency across regions</li>
+          <li>Implemented strict OpEx controls — 100% fiscal discipline on petty cash and recurring expenses</li>
+          <li>Facilitated multi-city town halls for knowledge sharing and team productivity</li>
         </ul>
-        <div class="exp-tag-row">
-          <span class="exp-tag">Pan-India Ops</span>
-          <span class="exp-tag">B2B Sales</span>
-          <span class="exp-tag">Store Audits</span>
-          <span class="exp-tag">OpEx Control</span>
-        </div>
+        <div class="exp-tags"><span class="exp-tag">Pan-India Ops</span><span class="exp-tag">B2B Sales</span><span class="exp-tag">Store Audits</span><span class="exp-tag">OpEx</span></div>
       </div>
     </div>
 
-    <!-- Spinny -->
-    <div class="exp-item fade-up">
-      <div class="exp-date">
-        <div class="exp-date-range">Mar 2021<br>Feb 2023</div>
-        <div class="exp-date-dur">2 years</div>
+    <div class="exp-row fade-up">
+      <div class="exp-meta">
+        <div class="exp-period">Mar 2021<br>Feb 2023</div>
+        <div class="exp-dur">2 years · 2× promoted</div>
       </div>
-      <div class="exp-card">
-        <div class="exp-header">
-          <div class="exp-role">Asst. Operations Manager</div>
-          <span class="exp-badge">2× Promoted</span>
-        </div>
+      <div class="exp-content">
+        <div class="exp-role">Asst. Operations Manager</div>
         <div class="exp-company">Spinny</div>
-        <div class="exp-location">Gurugram, Haryana · NCR Region</div>
-        <div class="exp-summary">Joined as an Analyst and was promoted twice in 2 years — Analyst → Delivery Manager → Assistant Operations Manager — eventually overseeing all delivery operations across NCR.</div>
+        <div class="exp-loc">Gurugram, Haryana · NCR Region</div>
+        <div class="exp-summary">Joined as Analyst, promoted twice in 2 years — eventually overseeing all delivery operations across NCR. Framework built here went PAN India.</div>
         <ul class="exp-bullets">
-          <li>Designed the "Home Delivery" operational framework from scratch — rolled out as PAN India standard</li>
-          <li>Scaled NCR operations to 1,000+ monthly deliveries by Dec 2022 — a 6× increase in home delivery volume (50 → 300/month)</li>
-          <li>Elevated premium unboxing experience by executing 45% of deliveries via flatbed trucks</li>
-          <li>Optimized inter-city inventory transit across 3 state borders for seamless logistics and regulatory compliance</li>
-          <li>Managed multi-tiered teams using custom dashboards and random audits to bridge hub ops with corporate metrics</li>
+          <li>Designed "Home Delivery" operational framework from scratch — standardized and rolled out PAN India</li>
+          <li>Scaled NCR to 1,000+ monthly deliveries — 6× growth in home delivery volume (50 → 300/month)</li>
+          <li>Executed 45% of deliveries via flatbed trucks, significantly elevating premium unboxing experience</li>
+          <li>Optimized inter-city transit across 3 state borders for seamless logistics and compliance</li>
+          <li>Managed multi-tiered teams using custom dashboards and random audits</li>
         </ul>
-        <div class="exp-tag-row">
-          <span class="exp-tag">Logistics</span>
-          <span class="exp-tag">Delivery Ops</span>
-          <span class="exp-tag">Framework Design</span>
-          <span class="exp-tag">Team Leadership</span>
-          <span class="exp-tag">Scale</span>
-        </div>
+        <div class="exp-tags"><span class="exp-tag">Logistics</span><span class="exp-tag">Delivery Ops</span><span class="exp-tag">Framework Design</span><span class="exp-tag">Scale</span></div>
       </div>
     </div>
 
-    <!-- AssignMe -->
-    <div class="exp-item fade-up">
-      <div class="exp-date">
-        <div class="exp-date-range">Jun 2020<br>Feb 2021</div>
-        <div class="exp-date-dur">9 months</div>
+    <div class="exp-row fade-up">
+      <div class="exp-meta">
+        <div class="exp-period">Jun 2020<br>Feb 2021</div>
+        <div class="exp-dur">9 months</div>
       </div>
-      <div class="exp-card">
-        <div class="exp-header">
-          <div class="exp-role">Operations Executive</div>
-          <span class="exp-badge">Full-time</span>
-        </div>
+      <div class="exp-content">
+        <div class="exp-role">Operations Executive</div>
         <div class="exp-company">AssignMe.co</div>
-        <div class="exp-location">Udaipur, Rajasthan · Remote (UK/Overseas clients)</div>
-        <div class="exp-summary">First role post-graduation, taken during Covid when opportunities had dried up. Managed overseas client operations remotely on a night-shift schedule — Airbnb property management and UK digital marketing.</div>
+        <div class="exp-loc">Udaipur · Remote (UK/Overseas)</div>
+        <div class="exp-summary">First role post-graduation, taken during Covid. Managed overseas Airbnb property operations remotely on a night-shift schedule, then UK digital marketing.</div>
         <ul class="exp-bullets">
-          <li>Handled Airbnb property management — leasing, availability, cleaning coordination, and multi-platform listing</li>
-          <li>Voluntarily worked 7 days a week against a 5-day contract to maximize output during an uncertain period</li>
+          <li>Voluntarily worked 7 days a week against a 5-day contract to maximize output</li>
         </ul>
-        <div class="exp-tag-row">
-          <span class="exp-tag">Remote Operations</span>
-          <span class="exp-tag">Client Management</span>
-        </div>
+        <div class="exp-tags"><span class="exp-tag">Remote Ops</span><span class="exp-tag">Client Management</span></div>
       </div>
     </div>
 
-    <!-- Yo Tours -->
-    <div class="exp-item fade-up">
-      <div class="exp-date">
-        <div class="exp-date-range">Jul 2018<br>Dec 2019</div>
-        <div class="exp-date-dur">1 yr 6 mos</div>
+    <div class="exp-row fade-up">
+      <div class="exp-meta">
+        <div class="exp-period">Jul 2018<br>Dec 2019</div>
+        <div class="exp-dur">18 months</div>
       </div>
-      <div class="exp-card">
-        <div class="exp-header">
-          <div class="exp-role">Storyteller & City Ops Lead</div>
-          <span class="exp-badge">Stayed 3× longer</span>
-        </div>
+      <div class="exp-content">
+        <div class="exp-role">Storyteller & City Ops Lead</div>
         <div class="exp-company">Yo Tours</div>
-        <div class="exp-location">Udaipur, Rajasthan · Tourism startup</div>
-        <div class="exp-summary">Joined as a 6-month college internship. Stayed 18 months because the results justified it — conceptualized, operationalized, and handed over a fully running city business unit.</div>
+        <div class="exp-loc">Udaipur, Rajasthan · Tourism startup</div>
+        <div class="exp-summary">Joined as a 6-month internship. Stayed 18 months by delivering results — conceptualized, operationalized, and handed over a fully running city business unit.</div>
         <ul class="exp-bullets">
-          <li>Conceptualized and launched the city's walking tours, food tours, and night tours entirely from scratch</li>
-          <li>Hired and trained 2 team members, then handed over complete city operations — leaving a functioning business unit behind</li>
+          <li>Launched walking tours, food tours, and night tours for Udaipur entirely from scratch</li>
+          <li>Hired and trained 2 team members, then handed over complete operations — leaving a functioning unit behind</li>
         </ul>
-        <div class="exp-tag-row">
-          <span class="exp-tag">City Operations</span>
-          <span class="exp-tag">Team Building</span>
-          <span class="exp-tag">Startup</span>
-        </div>
+        <div class="exp-tags"><span class="exp-tag">City Operations</span><span class="exp-tag">Team Building</span><span class="exp-tag">Startup</span></div>
       </div>
     </div>
 
@@ -599,216 +449,107 @@ footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center}
 </div>
 
 <!-- SKILLS -->
-<div class="full-section" id="skills">
+<div class="full-w" id="skills">
 <section>
   <div class="section-header fade-up">
-    <span class="section-label">Skills</span>
-    <h2>The toolkit.</h2>
+    <span class="sec-label">Capabilities</span>
+    <h2>The <em>toolkit.</em></h2>
   </div>
   <div class="skills-grid">
-    <div class="skill-group fade-up">
-      <span class="skill-group-label">Leadership</span>
-      <div class="skill-tags">
-        <span class="skill-tag">General Management</span>
-        <span class="skill-tag">Operations Leadership</span>
-        <span class="skill-tag">Cross-functional Teams</span>
-        <span class="skill-tag">People Management</span>
-        <span class="skill-tag">Chief of Staff</span>
-      </div>
-    </div>
-    <div class="skill-group fade-up">
-      <span class="skill-group-label">Project Delivery</span>
-      <div class="skill-tags">
-        <span class="skill-tag">Project Management</span>
-        <span class="skill-tag">Portfolio Oversight</span>
-        <span class="skill-tag">Stakeholder Management</span>
-        <span class="skill-tag">Risk Management</span>
-        <span class="skill-tag">Delivery Frameworks</span>
-      </div>
-    </div>
-    <div class="skill-group fade-up">
-      <span class="skill-group-label">Systems & Process</span>
-      <div class="skill-tags">
-        <span class="skill-tag">SOP Development</span>
-        <span class="skill-tag">Process Excellence</span>
-        <span class="skill-tag">Organization Design</span>
-        <span class="skill-tag">Governance Frameworks</span>
-        <span class="skill-tag">ERP-aligned Systems</span>
-      </div>
-    </div>
-    <div class="skill-group fade-up">
-      <span class="skill-group-label">Manufacturing & Supply Chain</span>
-      <div class="skill-tags">
-        <span class="skill-tag">Manufacturing Ops</span>
-        <span class="skill-tag">Inventory Control</span>
-        <span class="skill-tag">Vendor Management</span>
-        <span class="skill-tag">Procurement Workflows</span>
-        <span class="skill-tag">BOQ Analysis</span>
-      </div>
-    </div>
-    <div class="skill-group fade-up">
-      <span class="skill-group-label">Finance & Control</span>
-      <div class="skill-tags">
-        <span class="skill-tag">Budgeting</span>
-        <span class="skill-tag">Cost Control</span>
-        <span class="skill-tag">OpEx Management</span>
-        <span class="skill-tag">Audit Controls</span>
-        <span class="skill-tag">Tally</span>
-      </div>
-    </div>
-    <div class="skill-group fade-up">
-      <span class="skill-group-label">Data & Visibility</span>
-      <div class="skill-tags">
-        <span class="skill-tag">Dashboards</span>
-        <span class="skill-tag">Reporting Systems</span>
-        <span class="skill-tag">Data-driven Decisions</span>
-        <span class="skill-tag">Performance Tracking</span>
-        <span class="skill-tag">Strategic Planning</span>
-      </div>
-    </div>
+    <div class="skill-block fade-up"><span class="skill-label">Leadership</span><div class="skill-tags"><span class="skill-tag">General Management</span><span class="skill-tag">Operations Leadership</span><span class="skill-tag">Cross-functional Teams</span><span class="skill-tag">People Management</span></div></div>
+    <div class="skill-block fade-up"><span class="skill-label">Project Delivery</span><div class="skill-tags"><span class="skill-tag">Project Management</span><span class="skill-tag">Portfolio Oversight</span><span class="skill-tag">Stakeholder Management</span><span class="skill-tag">Risk Management</span></div></div>
+    <div class="skill-block fade-up"><span class="skill-label">Systems & Process</span><div class="skill-tags"><span class="skill-tag">SOP Development</span><span class="skill-tag">Process Excellence</span><span class="skill-tag">Governance</span><span class="skill-tag">ERP-aligned Systems</span></div></div>
+    <div class="skill-block fade-up"><span class="skill-label">Supply Chain</span><div class="skill-tags"><span class="skill-tag">Manufacturing Ops</span><span class="skill-tag">Inventory Control</span><span class="skill-tag">Vendor Management</span><span class="skill-tag">BOQ Analysis</span></div></div>
+    <div class="skill-block fade-up"><span class="skill-label">Finance & Control</span><div class="skill-tags"><span class="skill-tag">Budgeting</span><span class="skill-tag">Cost Control</span><span class="skill-tag">OpEx Management</span><span class="skill-tag">Audit Controls</span></div></div>
+    <div class="skill-block fade-up"><span class="skill-label">Data & Visibility</span><div class="skill-tags"><span class="skill-tag">Dashboards</span><span class="skill-tag">Reporting Systems</span><span class="skill-tag">Strategic Planning</span><span class="skill-tag">Performance Tracking</span></div></div>
   </div>
-
-  <!-- Education -->
-  <div style="margin-top:48px;" class="fade-up">
-    <div class="section-header" style="margin-bottom:24px">
-      <span class="section-label">Education</span>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">
-      <div class="skill-group">
-        <span class="skill-group-label">Degree</span>
-        <div style="font-size:15px;font-weight:500;color:var(--text);margin-bottom:4px">B.Tech — Automobile Engineering</div>
-        <div style="font-size:13px;color:var(--text2)">Geetanjali Institute of Technical Studies (GITS), Udaipur</div>
-        <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--text3);margin-top:6px">2016 – 2020</div>
-      </div>
-      <div class="skill-group">
-        <span class="skill-group-label">Languages</span>
-        <div class="skill-tags" style="margin-top:4px">
-          <span class="skill-tag">Hindi (Native)</span>
-          <span class="skill-tag">English (Professional)</span>
-        </div>
-      </div>
-    </div>
+  <div style="margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--border);border:1px solid var(--border)" class="fade-up">
+    <div class="skill-block"><span class="skill-label">Education</span><div style="font-size:15px;color:var(--text);font-family:'Cormorant Garamond',serif;font-style:italic">B.Tech, Automobile Engineering</div><div style="font-size:13px;color:var(--text2);margin-top:4px">GITS, Udaipur · 2016–2020</div></div>
+    <div class="skill-block"><span class="skill-label">Languages</span><div class="skill-tags"><span class="skill-tag">Hindi (Native)</span><span class="skill-tag">English (Professional)</span></div></div>
   </div>
 </section>
 </div>
 
-<!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-name">Harshit Soni</div>
-    <div class="footer-tagline">Building Execution Systems That Scale · Operations & Project Delivery · Manufacturing · Retail · Growth-stage Businesses</div>
-    <div class="footer-links">
-      <a href="https://linkedin.com/in/harshtsoni" target="_blank">LinkedIn</a>
-      <a href="mailto:hsudr007@gmail.com">Email</a>
-      <a href="tel:+919680641234">+91 96806 41234</a>
-    </div>
-    <button class="connect-btn" onclick="openConnect()" style="margin-bottom:24px">Let's Connect</button>
-    <div class="footer-copy">© 2026 Harshit Soni · Udaipur, Rajasthan, India</div>
+  <div class="footer-logo">Harshit Soni</div>
+  <div class="footer-line">Building Execution Systems That Scale · Operations & Project Delivery</div>
+  <div class="footer-links">
+    <a href="https://linkedin.com/in/harshtsoni" target="_blank">LinkedIn</a>
+    <a href="mailto:hsudr007@gmail.com">Email</a>
+    <a href="tel:+919680641234">+91 96806 41234</a>
   </div>
+  <button class="connect-btn" onclick="openConnect()" style="margin-bottom:28px">Let's Connect</button>
+  <div class="footer-copy">© 2026 Harshit Soni · Udaipur, Rajasthan, India</div>
 </footer>
 
-<!-- CONTACT POPUP -->
+<!-- POPUP -->
 <div class="overlay" id="overlay" onclick="closeConnect(event)">
   <div class="popup">
-    <div class="popup-header">
-      <div>
-        <div class="popup-title">Let's Connect</div>
-        <div class="popup-sub">Choose how you'd like to reach out</div>
-      </div>
-      <button class="popup-close" onclick="closeConnectDirect()">✕</button>
-    </div>
-    <div class="contact-options">
-      <a class="contact-opt primary" href="https://wa.me/919680641234?text=Hi%20Harshit%2C%20I%20came%20across%20your%20profile%20and%20would%20love%20to%20connect." target="_blank">
-        <div class="opt-icon">💬</div>
-        <div>
-          <div class="opt-label">WhatsApp</div>
-          <div class="opt-value">Message directly</div>
-        </div>
-        <div class="opt-action">Chat ↗</div>
+    <button class="popup-close" onclick="closeConnectDirect()">✕</button>
+    <div class="popup-title">Let's <em>Connect</em></div>
+    <div class="popup-sub">Choose how you'd like to reach out</div>
+    <div class="contact-opts">
+      <a class="contact-opt gold-opt" href="https://wa.me/919680641234?text=Hi%20Harshit%2C%20I%20came%20across%20your%20profile%20and%20would%20love%20to%20connect." target="_blank">
+        <div class="opt-ic">💬</div><div><div class="opt-lbl">WhatsApp</div><div class="opt-val">Message directly</div></div><div class="opt-arr">↗</div>
       </a>
       <a class="contact-opt" href="tel:+919680641234">
-        <div class="opt-icon">📞</div>
-        <div>
-          <div class="opt-label">Call</div>
-          <div class="opt-value">+91 96806 41234</div>
-        </div>
-        <div class="opt-action">Call ↗</div>
+        <div class="opt-ic">📞</div><div><div class="opt-lbl">Call</div><div class="opt-val">+91 96806 41234</div></div><div class="opt-arr">↗</div>
       </a>
       <a class="contact-opt" href="mailto:hsudr007@gmail.com?subject=Let's%20Connect%20—%20Saw%20Your%20Profile">
-        <div class="opt-icon">✉️</div>
-        <div>
-          <div class="opt-label">Email</div>
-          <div class="opt-value">hsudr007@gmail.com</div>
-        </div>
-        <div class="opt-action">Mail ↗</div>
+        <div class="opt-ic">✉️</div><div><div class="opt-lbl">Email</div><div class="opt-val">hsudr007@gmail.com</div></div><div class="opt-arr">↗</div>
       </a>
       <div class="contact-opt" onclick="copyEmail()" style="cursor:pointer">
-        <div class="opt-icon">📋</div>
-        <div>
-          <div class="opt-label">Copy Email</div>
-          <div class="opt-value">Click to copy to clipboard</div>
-        </div>
-        <div class="opt-action">Copy</div>
+        <div class="opt-ic">📋</div><div><div class="opt-lbl">Copy Email</div><div class="opt-val">Click to copy</div></div><div class="opt-arr">Copy</div>
       </div>
       <a class="contact-opt" href="https://linkedin.com/in/harshtsoni" target="_blank">
-        <div class="opt-icon">🔗</div>
-        <div>
-          <div class="opt-label">LinkedIn</div>
-          <div class="opt-value">linkedin.com/in/harshtsoni</div>
-        </div>
-        <div class="opt-action">View ↗</div>
+        <div class="opt-ic">🔗</div><div><div class="opt-lbl">LinkedIn</div><div class="opt-val">linkedin.com/in/harshtsoni</div></div><div class="opt-arr">↗</div>
       </a>
     </div>
-    <div class="copied" id="copied">✓ Email copied to clipboard</div>
+    <div class="copied" id="copied">✓ Copied to clipboard</div>
   </div>
 </div>
 
+<!-- FLOATING RESUME BUTTON -->
+<a class="resume-fab" href="Harshit_Soni_Resume.pdf" download="Harshit_Soni_Resume.pdf" title="Download Resume">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+    <polyline points="7 10 12 15 17 10"/>
+    <line x1="12" y1="15" x2="12" y2="3"/>
+  </svg>
+  Resume
+</a>
+
 <script>
-// ── Theme ──
-function getSystemTheme(){return window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
+function getSystemTheme(){return window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}
 function applyTheme(t){
   document.documentElement.setAttribute('data-theme',t);
   document.getElementById('themeBtn').textContent=t==='dark'?'☀️':'🌙';
   localStorage.setItem('hs-theme',t);
 }
 function toggleTheme(){
-  const cur=document.documentElement.getAttribute('data-theme');
+  const cur=document.documentElement.getAttribute('data-theme')||'auto';
   const eff=cur==='auto'?getSystemTheme():cur;
   applyTheme(eff==='dark'?'light':'dark');
 }
 (function(){
   const saved=localStorage.getItem('hs-theme');
   if(saved){applyTheme(saved)}
-  else{
-    const sys=getSystemTheme();
-    document.getElementById('themeBtn').textContent=sys==='dark'?'☀️':'🌙';
-  }
+  else{document.getElementById('themeBtn').textContent=getSystemTheme()==='dark'?'☀️':'🌙'}
 })();
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',e=>{
-  if(!localStorage.getItem('hs-theme'))document.getElementById('themeBtn').textContent=e.matches?'☀️':'🌙';
-});
-
-// ── Popup ──
 function openConnect(){document.getElementById('overlay').classList.add('open')}
 function closeConnectDirect(){document.getElementById('overlay').classList.remove('open')}
 function closeConnect(e){if(e.target===document.getElementById('overlay'))closeConnectDirect()}
 function copyEmail(){
   navigator.clipboard.writeText('hsudr007@gmail.com').then(()=>{
-    const el=document.getElementById('copied');
-    el.classList.add('show');
+    const el=document.getElementById('copied');el.classList.add('show');
     setTimeout(()=>el.classList.remove('show'),2500);
   });
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeConnectDirect()});
-
-// ── Fade in on scroll ──
-const obs=new IntersectionObserver((entries)=>{
+const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
-},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.fade-up').forEach((el,i)=>{
-  el.style.transitionDelay=(i%4)*0.08+'s';
-  obs.observe(el);
-});
+},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach((el,i)=>{el.style.transitionDelay=(i%3)*0.1+'s';obs.observe(el)});
 </script>
 </body>
 </html>
