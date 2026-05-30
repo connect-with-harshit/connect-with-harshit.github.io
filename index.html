@@ -76,6 +76,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--nav-bg);bac
 .hero-name-block{margin-bottom:16px;opacity:0;animation:fadeIn .8s .4s forwards}
 .hero-first{font-family:'Alta Caption',sans-serif;font-size:clamp(56px,8vw,110px);font-weight:400;letter-spacing:0.08em;text-transform:uppercase;line-height:0.9;color:var(--text);display:block}
 .hero-last{font-family:'Alta Caption',sans-serif;font-size:clamp(56px,8vw,110px);line-height:0.9;color:var(--gold-light);display:block;margin-left:8px;letter-spacing:0.1em;text-transform:uppercase}
+.hero-summary{font-family:'DM Sans',sans-serif;font-size:clamp(13px,1.4vw,15px);color:var(--text3);line-height:1.7;max-width:560px;margin-bottom:28px;opacity:0;animation:fadeIn .8s .52s forwards;border-left:2px solid var(--gold2);padding-left:14px}
 .hero-tagline{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.2vw,24px);font-weight:300;font-style:italic;color:var(--text2);margin-bottom:36px;max-width:600px;opacity:0;animation:fadeIn .8s .5s forwards;line-height:1.5}
 .hero-divider{display:flex;align-items:center;gap:16px;margin-bottom:32px;opacity:0;animation:fadeIn .8s .55s forwards}
 .hero-divider-line{flex:1;max-width:60px;height:1px;background:var(--border2)}
@@ -122,6 +123,8 @@ h2 em{font-family:'Alta Caption',sans-serif;font-size:1em;text-transform:upperca
 .impact-n{font-family:'Alta Caption',sans-serif;font-size:42px;letter-spacing:0.06em;color:var(--gold);line-height:1}
 .impact-d{font-size:13px;color:var(--text2);margin-top:8px;line-height:1.4}
 .impact-c{font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);margin-top:6px;letter-spacing:0.06em}
+.impact-ctx{font-size:11px;color:var(--text3);margin-top:8px;line-height:1.5;font-family:'DM Sans',sans-serif;font-style:italic;opacity:0;max-height:0;overflow:hidden;transition:all .3s}
+.impact-cell:hover .impact-ctx{opacity:1;max-height:60px}
 
 /* EXPERIENCE */
 .exp-list{margin-top:48px}
@@ -217,6 +220,47 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
 [data-theme="light"] .exp-logo img{filter:grayscale(1) brightness(0.3);opacity:0.5}
 [data-theme="light"] .exp-row:hover .exp-logo img{filter:grayscale(0) brightness(1);opacity:1}
 
+
+/* WHO SHOULD HIRE ME */
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--border);margin-top:48px}
+.who-card{padding:32px;background:var(--bg);border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:background .2s}
+.who-card:hover{background:var(--bg2)}
+.who-icon{font-size:22px;margin-bottom:14px}
+.who-title{font-family:'Alta Caption',sans-serif;font-size:13px;letter-spacing:0.08em;color:var(--text);margin-bottom:10px;line-height:1.4}
+.who-desc{font-size:13px;color:var(--text2);line-height:1.7;font-family:'DM Sans',sans-serif}
+.who-card--cta{background:var(--bg3)}
+.who-card--cta:hover{background:var(--bg4)}
+.who-btn{margin-top:18px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:10px 20px;background:transparent;color:var(--gold);border:1px solid var(--gold);cursor:pointer;border-radius:2px;transition:all .2s}
+.who-btn:hover{background:var(--gold);color:var(--bg)}
+@media(max-width:900px){.who-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.who-grid{grid-template-columns:1fr}}
+
+/* CASE STUDY */
+.cs-container{margin-top:48px;border:1px solid var(--border)}
+.cs-header{padding:32px 40px;border-bottom:1px solid var(--border);background:var(--bg2)}
+.cs-company{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;margin-bottom:8px}
+.cs-title{font-family:'Alta Caption',sans-serif;font-size:clamp(20px,3vw,30px);letter-spacing:0.06em;color:var(--text);margin-bottom:6px}
+.cs-period{font-family:'DM Mono',monospace;font-size:11px;color:var(--text3);letter-spacing:0.06em}
+.cs-body{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+.cs-block{padding:32px 40px;border-right:1px solid var(--border)}
+.cs-block:last-child{border-right:none}
+.cs-block-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.cs-block-text{font-size:14px;color:var(--text2);line-height:1.8;font-family:'DM Sans',sans-serif}
+.cs-outcomes{display:flex;flex-direction:column;gap:16px}
+.cs-outcome{display:flex;align-items:flex-start;gap:14px}
+.cs-stat{font-family:'Alta Caption',sans-serif;font-size:24px;color:var(--gold);letter-spacing:0.06em;flex-shrink:0;line-height:1.1}
+.cs-stat-label{font-size:13px;color:var(--text2);line-height:1.5;font-family:'DM Sans',sans-serif;padding-top:2px}
+@media(max-width:900px){.cs-body{grid-template-columns:1fr}.cs-block{border-right:none;border-bottom:1px solid var(--border)}.cs-block:last-child{border-bottom:none}}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:48px}
+.testi-card{padding:36px;border:1px solid var(--border);background:var(--bg2);position:relative}
+.testi-card::before{content:'"';font-family:'Cormorant Garamond',serif;font-size:80px;color:var(--gold2);position:absolute;top:12px;left:24px;line-height:1}
+.testi-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--text);line-height:1.7;padding-top:40px}
+.testi-author{margin-top:24px;padding-top:16px;border-top:1px solid var(--border)}
+.testi-name{font-family:'Alta Caption',sans-serif;font-size:12px;letter-spacing:0.1em;color:var(--gold)}
+.testi-role{font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);margin-top:3px;letter-spacing:0.06em}
+
 /* OPEN TO */
 .opento-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;border:1px solid var(--border);margin-top:48px}
 .opento-card{padding:32px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg)}
@@ -270,9 +314,11 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
   <a class="nav-logo" href="#">Harshit</a>
   <div class="nav-links">
     <a href="#about">About</a>
+    <a href="#whohires">Best Fit</a>
     <a href="#impact">Impact</a>
     <a href="#experience">Experience</a>
     <a href="#systems">Work</a>
+    <a href="#casestudy">Case Study</a>
     <a href="#skills">Skills</a>
     <a href="#opento">Open To</a>
   </div>
@@ -290,6 +336,9 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
     <span class="hero-last">Soni.</span>
   </div>
   <div class="hero-tagline">Building execution systems that scale — across manufacturing, retail, and growth-stage businesses.</div>
+  <div class="hero-summary fade-up">
+    Operations leader with 7+ years building execution systems across bespoke manufacturing, logistics, retail, and founder-led businesses — delivering scale, process transformation, and operational control where it matters most.
+  </div>
   <div class="hero-divider">
     <div class="hero-divider-line"></div>
     <div class="hero-divider-text">7+ years · Udaipur, India</div>
@@ -331,12 +380,65 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
     </div>
     <div class="pillar fade-up">
       <div class="pillar-num">03</div>
-      <h3>Never let a business take a loss</h3>
-      <p>Due to my negligence — a standard held from day one. Whether it's fiscal discipline, delivery risk, or supply chain accountability, I treat the business's money and reputation like my own.</p>
+      <h3>Treat the business like it's my own</h3>
+      <p>Fiscal discipline, delivery risk, supply chain accountability — I hold myself to ownership-level standards on all of it. The business's money and reputation are never someone else's problem to protect.</p>
     </div>
   </div>
   <div style="margin-top:48px;padding:36px 40px;border:1px solid var(--border2);background:var(--gold2)" class="fade-up">
     <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;font-style:italic;color:var(--text);line-height:1.6">"I thrive in founder-led, growth-stage environments where systems need to match ambition. If that sounds like your business — let's talk."</p>
+  </div>
+</section>
+</div>
+
+
+<!-- WHO SHOULD HIRE ME -->
+<div class="full-w" id="whohires">
+<section>
+  <div class="section-header fade-up">
+    <span class="sec-label">Best fit</span>
+    <h2>Who should <em>hire me.</em></h2>
+    <p class="sec-sub">Not every ops role is the right ops role. Here's where I create the most impact.</p>
+  </div>
+
+  <div class="who-grid fade-up">
+
+    <div class="who-card">
+      <div class="who-icon">⚙️</div>
+      <div class="who-title">Founder-led startups & scale-ups</div>
+      <p class="who-desc">If you're a founder who's been doing operations yourself and it's starting to break — that's exactly where I come in. I build the system around you so you can step back.</p>
+    </div>
+
+    <div class="who-card">
+      <div class="who-icon">🪵</div>
+      <div class="who-title">Furniture, interior & manufacturing businesses</div>
+      <p class="who-desc">7 years across bespoke furniture, fit-out, and production operations. I understand the chaos between design intent, manufacturing reality, and client delivery — and how to close that gap.</p>
+    </div>
+
+    <div class="who-card">
+      <div class="who-icon">🏪</div>
+      <div class="who-title">Multi-location retail & D2C operations</div>
+      <p class="who-desc">Store audits, SOP rollouts, OpEx control, B2B pipeline development — I've done it across cities. If you need ground-level execution with corporate discipline, that's a match.</p>
+    </div>
+
+    <div class="who-card">
+      <div class="who-icon">🚀</div>
+      <div class="who-title">Businesses lacking systems, not effort</div>
+      <p class="who-desc">Most growing businesses have hardworking people but no operating system. I diagnose what's missing, build what's needed, and make sure it outlasts my involvement.</p>
+    </div>
+
+    <div class="who-card">
+      <div class="who-icon">📋</div>
+      <div class="who-title">PMO setup & operational restructuring</div>
+      <p class="who-desc">Need a project management function built from zero? I've done it — SOPs, tracking frameworks, cross-team coordination structures, governance. End to end.</p>
+    </div>
+
+    <div class="who-card who-card--cta">
+      <div class="who-icon">🤝</div>
+      <div class="who-title">Not sure if it's a fit?</div>
+      <p class="who-desc">Tell me the problem you're trying to solve. If I'm the right person for it, I'll say yes. If I'm not, I'll tell you that too.</p>
+      <button onclick="openConnect()" class="who-btn">Let's find out →</button>
+    </div>
+
   </div>
 </section>
 </div>
@@ -350,16 +452,16 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
     <p class="sec-sub">Outcomes from the work — not responsibilities from the JD.</p>
   </div>
   <div class="impact-grid">
-    <div class="impact-cell fade-up"><div class="impact-n">6×</div><div class="impact-d">Home delivery volume growth at Spinny NCR</div><div class="impact-c">50 → 300 units/month</div></div>
-    <div class="impact-cell fade-up"><div class="impact-n">1K+</div><div class="impact-d">Monthly deliveries achieved by Dec 2022</div><div class="impact-c">NCR region · Spinny</div></div>
-    <div class="impact-cell fade-up"><div class="impact-n">130%</div><div class="impact-d">Sales growth as Operations Manager</div><div class="impact-c">WoodenStreet · Pan-India</div></div>
-    <div class="impact-cell fade-up"><div class="impact-n">~70%</div><div class="impact-d">Manual effort reduced via product standardization</div><div class="impact-c">I.EVO · PM team SOPs</div></div>
-    <div class="impact-cell fade-up"><div class="impact-n">100%</div><div class="impact-d">Fiscal discipline on store-level OpEx</div><div class="impact-c">WoodenStreet · multi-city</div></div>
-    <div class="impact-cell fade-up"><div class="impact-n">2×</div><div class="impact-d">Promoted in 2 years at Spinny</div><div class="impact-c">Analyst → Manager → Asst. Ops Head</div></div>
-    <div class="impact-cell fade-up"><div class="impact-n">PAN🇮🇳</div><div class="impact-d">Delivery framework rolled out nationwide</div><div class="impact-c">Built from scratch · Spinny</div></div>
-    <div class="impact-cell fade-up"><div class="impact-n">45%</div><div class="impact-d">Premium deliveries via flatbed trucks</div><div class="impact-c">Customer satisfaction uplift</div></div>
-    <div class="impact-cell fade-up"><div class="impact-n">~90%</div><div class="impact-d">Manual reconciliation effort eliminated</div><div class="impact-c">Store–Inventory–Accounts system · Arten Space</div></div>
-    <div class="impact-cell fade-up"><div class="impact-n">180 hrs</div><div class="impact-d">Saved per month via process automation</div><div class="impact-c">Executive capacity freed · Arten Space</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">6×</div><div class="impact-d">Home delivery volume growth at Spinny NCR</div><div class="impact-c">50 → 300 units/month · 18 months</div><div class="impact-ctx">NCR region scaled from a pilot to the highest-volume hub before framework went national</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">1K+</div><div class="impact-d">Monthly deliveries by Dec 2022</div><div class="impact-c">NCR region · Spinny</div><div class="impact-ctx">Peak milestone achieved within 2 years of joining as Analyst — entire ops built ground up</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">130%</div><div class="impact-d">Sales growth as Operations Manager</div><div class="impact-c">WoodenStreet · Feb 2023 – Jan 2024</div><div class="impact-ctx">Across multi-city retail stores; driven by B2B pipeline, SOPs, and cross-team execution</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">~70%</div><div class="impact-d">Manual effort reduced via standardization</div><div class="impact-c">I.EVO · PM team · 2024–25</div><div class="impact-ctx">Product library + SOPs replaced ad-hoc appraisal effort, enabling PM team to handle more with less</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">100%</div><div class="impact-d">Fiscal discipline on store-level OpEx</div><div class="impact-c">WoodenStreet · multi-city</div><div class="impact-ctx">Zero petty cash leakage across all stores; implemented audit-ready controls from scratch</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">2×</div><div class="impact-d">Promoted in 2 years at Spinny</div><div class="impact-c">Analyst → Manager → Asst. Ops Head</div><div class="impact-ctx">Only person in cohort promoted twice; took over full NCR delivery operations at Asst. Manager level</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">PAN🇮🇳</div><div class="impact-d">Delivery framework rolled out nationwide</div><div class="impact-c">Built from scratch · Spinny</div><div class="impact-ctx">Home Delivery SOP designed for NCR was adopted as the national standard across all Spinny cities</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">45%</div><div class="impact-d">Premium deliveries via flatbed trucks</div><div class="impact-c">Spinny NCR · ~1,000 monthly deliveries</div><div class="impact-ctx">Elevated used-car delivery experience; nearly half of all NCR deliveries executed at premium service level</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">~90%</div><div class="impact-d">Manual reconciliation effort eliminated</div><div class="impact-c">Store–Inventory–Accounts · Arten Space</div><div class="impact-ctx">Integrated transaction system replaced daily manual entry; freed executives for audit and higher-value work</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">180 hrs</div><div class="impact-d">Saved per month via process automation</div><div class="impact-c">Arten Space · Dec 2025 onwards</div><div class="impact-ctx">Digitised production workflows removed handwritten tokens; MIS staff redeployed to critical operations</div></div>
   </div>
 </section>
 </div>
@@ -659,6 +761,55 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
 </section>
 </div>
 
+
+<!-- CASE STUDY -->
+<div class="full-w" id="casestudy">
+<section>
+  <div class="section-header fade-up">
+    <span class="sec-label">Deep dive</span>
+    <h2>One problem, <em>solved.</em></h2>
+    <p class="sec-sub">A single case study says more than five experience bullets.</p>
+  </div>
+
+  <div class="cs-container fade-up">
+
+    <div class="cs-header">
+      <div class="cs-company">I.EVO · Bespoke Furniture · Udaipur</div>
+      <div class="cs-title">Rebuilding Operations from the Inside</div>
+      <div class="cs-period">Feb 2024 – Aug 2025 · 18 months</div>
+    </div>
+
+    <div class="cs-body">
+
+      <div class="cs-block">
+        <div class="cs-block-label">The Situation</div>
+        <div class="cs-block-text">
+          <!-- REPLACE WITH YOUR STORY — what was broken when you joined? -->
+          <em style="color:var(--text3);font-style:italic">[ Your story goes here — what was the state of operations when you joined? What was visibly broken, what was invisibly broken? ]</em>
+        </div>
+      </div>
+
+      <div class="cs-block">
+        <div class="cs-block-label">What I Did</div>
+        <div class="cs-block-text">
+          <em style="color:var(--text3);font-style:italic">[ What did you build, change, or introduce? Be specific. ]</em>
+        </div>
+      </div>
+
+      <div class="cs-block">
+        <div class="cs-block-label">What Changed</div>
+        <div class="cs-outcomes">
+          <div class="cs-outcome"><span class="cs-stat">~70%</span><span class="cs-stat-label">Reduction in manual PM effort via product standardisation</span></div>
+          <div class="cs-outcome"><span class="cs-stat">—</span><span class="cs-stat-label">[ Add more outcomes once you share the full story ]</span></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+</div>
+
 <!-- SKILLS -->
 <div class="full-w" id="skills">
 <section>
@@ -715,12 +866,11 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
     <div class="opento-card">
       <div class="opento-label">Roles</div>
       <div class="opento-tags">
-        <span class="opento-tag">Operations Manager</span>
-        <span class="opento-tag">Project Manager</span>
-        <span class="opento-tag">General Manager</span>
-        <span class="opento-tag">Chief of Staff</span>
-        <span class="opento-tag">Business Head</span>
-        <span class="opento-tag">Delivery Head</span>
+        <span class="opento-tag opento-tag--gold">General Manager – Operations</span>
+        <span class="opento-tag opento-tag--gold">Chief of Staff</span>
+        <span class="opento-tag">Business Operations Lead</span>
+        <span class="opento-tag">Operations Excellence Lead</span>
+        <span class="opento-tag">Project Delivery Head</span>
       </div>
     </div>
 
@@ -769,6 +919,43 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
 </section>
 </div>
 
+
+
+<!-- ═══════════════════════════════════════════════════
+     TESTIMONIALS — HIDDEN UNTIL YOU HAVE QUOTES
+     To activate: remove the  <!-- HIDDEN START  and  HIDDEN END  wrappers
+     ⚠️  REMINDER: Chase the Arten Space founder + LinkedIn endorsements
+     ═══════════════════════════════════════════════════ -->
+<!-- HIDDEN START
+<div class="full-w" id="testimonials">
+<section>
+  <div class="section-header fade-up">
+    <span class="sec-label">In their words</span>
+    <h2>People who've <em>seen it.</em></h2>
+  </div>
+
+  <div class="testi-grid fade-up">
+
+    <div class="testi-card">
+      <div class="testi-quote">"Placeholder — replace with real quote from founder or manager."</div>
+      <div class="testi-author">
+        <div class="testi-name">Name Here</div>
+        <div class="testi-role">Founder / Director · Company Name</div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <div class="testi-quote">"Placeholder — replace with LinkedIn recommendation or endorsement."</div>
+      <div class="testi-author">
+        <div class="testi-name">Name Here</div>
+        <div class="testi-role">Role · Company</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+HIDDEN END -->
 
 <footer>
   <div class="footer-logo">Harshit Soni</div>
