@@ -251,6 +251,21 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
 .cs-stat{font-family:'Alta Caption',sans-serif;font-size:24px;color:var(--gold);letter-spacing:0.06em;flex-shrink:0;line-height:1.1}
 .cs-stat-label{font-size:13px;color:var(--text2);line-height:1.5;font-family:'DM Sans',sans-serif;padding-top:2px}
 @media(max-width:900px){.cs-body{grid-template-columns:1fr}.cs-block{border-right:none;border-bottom:1px solid var(--border)}.cs-block:last-child{border-bottom:none}}
+.cs-outcomes-row{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border)}
+.cs-outcome-wide{padding:28px 32px;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:8px}
+.cs-outcome-wide:last-child{border-right:none}
+.cs-outcome-wide .cs-stat{font-family:'Alta Caption',sans-serif;font-size:28px;color:var(--gold);letter-spacing:0.06em;line-height:1}
+.cs-outcome-wide .cs-stat-label{font-size:12px;color:var(--text2);line-height:1.6;font-family:'DM Sans',sans-serif}
+@media(max-width:900px){.cs-outcomes-row{grid-template-columns:repeat(2,1fr)}.cs-outcome-wide{border-right:none;border-bottom:1px solid var(--border)}}
+@media(max-width:600px){.cs-outcomes-row{grid-template-columns:1fr}}
+.cs-footnote{padding:24px 40px;border-top:1px solid var(--border);background:var(--bg3);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--text2);line-height:1.7}
+.cs-outcomes-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--border)}
+.cs-outcome-wide{padding:28px 32px;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:8px}
+.cs-outcome-wide:last-child{border-right:none}
+.cs-outcome-wide .cs-stat{font-family:'Alta Caption',sans-serif;font-size:28px;color:var(--gold);letter-spacing:0.06em;line-height:1}
+.cs-outcome-wide .cs-stat-label{font-size:12px;color:var(--text2);line-height:1.6;font-family:'DM Sans',sans-serif}
+@media(max-width:900px){.cs-outcomes-row{grid-template-columns:repeat(2,1fr)}.cs-outcome-wide{border-right:none;border-bottom:1px solid var(--border)}}
+@media(max-width:600px){.cs-outcomes-row{grid-template-columns:1fr}}
 
 /* TESTIMONIALS */
 .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:48px}
@@ -462,6 +477,7 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
     <div class="impact-cell fade-up"><div class="impact-n">45%</div><div class="impact-d">Premium deliveries via flatbed trucks</div><div class="impact-c">Spinny NCR · ~1,000 monthly deliveries</div><div class="impact-ctx">Elevated used-car delivery experience; nearly half of all NCR deliveries executed at premium service level</div></div>
     <div class="impact-cell fade-up"><div class="impact-n">~90%</div><div class="impact-d">Manual reconciliation effort eliminated</div><div class="impact-c">Store–Inventory–Accounts · Arten Space</div><div class="impact-ctx">Integrated transaction system replaced daily manual entry; freed executives for audit and higher-value work</div></div>
     <div class="impact-cell fade-up"><div class="impact-n">180 hrs</div><div class="impact-d">Saved per month via process automation</div><div class="impact-c">Arten Space · Dec 2025 onwards</div><div class="impact-ctx">Digitised production workflows removed handwritten tokens; MIS staff redeployed to critical operations</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n">~30%</div><div class="impact-d">Production cost savings via QC framework</div><div class="impact-c">Rework eliminated · Arten Space</div><div class="impact-ctx">Random QC at department and dispatch level surfaced and eliminated rework that was previously invisible and uncosted</div></div>
   </div>
 </section>
 </div>
@@ -767,8 +783,8 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
 <section>
   <div class="section-header fade-up">
     <span class="sec-label">Deep dive</span>
-    <h2>One problem, <em>solved.</em></h2>
-    <p class="sec-sub">A single case study says more than five experience bullets.</p>
+    <h2>Problems, <em>solved.</em></h2>
+    <p class="sec-sub">Two organisations. Two very different problems. Same approach — understand everything, fix what matters.</p>
   </div>
 
   <div class="cs-container fade-up">
@@ -784,29 +800,113 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
       <div class="cs-block">
         <div class="cs-block-label">The Situation</div>
         <div class="cs-block-text">
-          <!-- REPLACE WITH YOUR STORY — what was broken when you joined? -->
-          <em style="color:var(--text3);font-style:italic">[ Your story goes here — what was the state of operations when you joined? What was visibly broken, what was invisibly broken? ]</em>
+          I.EVO is a bespoke furniture manufacturer — every project custom, every client different. But the team had developed a costly habit: treating every product as if it had never been made before.<br><br>
+          Each new enquiry triggered a full R&amp;D cycle — drawings, material selection, fabric selection, finish decisions, mock-up production — even for items already designed, sampled, and delivered on previous projects. Files weren't maintained. Institutional knowledge walked out with each completed project.<br><br>
+          The result: even loose furniture or small-quantity orders inherited the same 180-day timeline as a 100-room hospitality fit-out. Clients were demotivated. Deals were being lost before they started.
         </div>
       </div>
 
       <div class="cs-block">
-        <div class="cs-block-label">What I Did</div>
+        <div class="cs-block-label">What I Built</div>
         <div class="cs-block-text">
-          <em style="color:var(--text3);font-style:italic">[ What did you build, change, or introduce? Be specific. ]</em>
+          Within weeks of joining, I flagged the pattern to management and got alignment to build a Standard Product Library — a structured repository of every item I.EVO had previously designed, sampled, and produced, complete with all associated production files.<br><br>
+          The library served two purposes simultaneously. Internally, it eliminated repeated R&amp;D effort — the PM team could reference existing drawings, material specs, and finish options without starting from zero. Externally, it became a client tool — physical samples were catalogued so clients could touch, feel, and evaluate actual finished products before committing.<br><br>
+          For clients selecting from the standard library, the pitch changed: no mock-up phase, no material uncertainty, no extended approval loops. Files were ready. Samples were available. Production could begin immediately.
         </div>
       </div>
 
       <div class="cs-block">
         <div class="cs-block-label">What Changed</div>
         <div class="cs-outcomes">
-          <div class="cs-outcome"><span class="cs-stat">~70%</span><span class="cs-stat-label">Reduction in manual PM effort via product standardisation</span></div>
-          <div class="cs-outcome"><span class="cs-stat">—</span><span class="cs-stat-label">[ Add more outcomes once you share the full story ]</span></div>
+          <div class="cs-outcome">
+            <span class="cs-stat">180→45</span>
+            <span class="cs-stat-label">Days to delivery for standard product orders — R&amp;D, material selection, and mock-up phases eliminated entirely</span>
+          </div>
+          <div class="cs-outcome">
+            <span class="cs-stat">~70%</span>
+            <span class="cs-stat-label">Reduction in PM team effort per standard project — same team, significantly higher throughput</span>
+          </div>
+          <div class="cs-outcome">
+            <span class="cs-stat">↑</span>
+            <span class="cs-stat-label">Smaller projects and loose furniture orders became commercially viable — deals no longer lost to timeline friction</span>
+          </div>
+          <div class="cs-outcome">
+            <span class="cs-stat">↑</span>
+            <span class="cs-stat-label">Client experience transformed — physical samples enabled confident, faster decisions at the appraisal stage</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="cs-footnote">
+      The library didn't compromise I.EVO's bespoke positioning — full custom R&amp;D remained available for clients who needed it. It simply gave the business a second gear: a faster, lower-friction path for clients who valued speed and certainty over complete customisation.
+    </div>
+
+  </div>
+
+  <!-- ARTEN SPACE CASE STUDY -->
+  <div class="cs-container fade-up" style="margin-top:48px">
+
+    <div class="cs-header">
+      <div class="cs-company">Arten Space · Bespoke Furniture Manufacturer · Udaipur</div>
+      <div class="cs-title">Building an Operating System from the Ground Up</div>
+      <div class="cs-period">Dec 2025 – Present · Ongoing</div>
+    </div>
+
+    <div class="cs-body" style="grid-template-columns:1fr 1fr">
+
+      <div class="cs-block">
+        <div class="cs-block-label">The Situation</div>
+        <div class="cs-block-text">
+          Arten Space had the right ingredients — quality product, strong design sensibility, and genuine relationships with architects, interior designers, and HNWI clients across Udaipur and PAN India. Business was flowing. But underneath, the operating system was failing quietly.<br><br>
+          Every department ran on paper coupons — material requisitions, gate passes, job cards, petty cash, dispatch tracking. Data entry executives sat at every process node, manually transcribing coupons into registers, then re-entering them digitally. Despite all this effort, nothing was actually visible. Management had no live picture of what was happening on the floor, in the store, or in accounts.<br><br>
+          There was no leave policy. No productivity measurement. No QC at department level. Rework was common but unquantified. HR was drowning in daily paperwork. And underneath all of it — broken child processes upstream of production, compounded by poor cross-team communication.
+        </div>
+      </div>
+
+      <div class="cs-block">
+        <div class="cs-block-label">What I Built</div>
+        <div class="cs-block-text">
+          I started with a ground-level RCA — learning every process in detail, including the smallest decisions, before proposing anything. Then rebuilt systematically.<br><br>
+          <strong style="color:var(--text);font-size:12px;letter-spacing:0.06em;font-family:'DM Mono',monospace">COUPON SYSTEM → GOOGLE SHEETS</strong><br>
+          Eliminated the entire paper coupon infrastructure across production, accounts, store, dispatch, and installation. Replaced with structured Google Sheets — binary data entry for ground-level staff, cell-edit restrictions by role. This centralised accounts, purchase, store, and production material consumption into one visible system — and freed every data entry executive from manual transcription.<br><br>
+          <strong style="color:var(--text);font-size:12px;letter-spacing:0.06em;font-family:'DM Mono',monospace">QC FRAMEWORK</strong><br>
+          Introduced product-level quality checks at both department and dispatch stages — random sampling, structured sign-off, documented rework triggers. Previously invisible rework costs became measurable and reducible.<br><br>
+          <strong style="color:var(--text);font-size:12px;letter-spacing:0.06em;font-family:'DM Mono',monospace">PRODUCTIVITY TRACKING</strong><br>
+          Built a supervisor-level data capture system feeding into a comparative productivity matrix — giving management the first real visibility into output per department, per day.<br><br>
+          <strong style="color:var(--text);font-size:12px;letter-spacing:0.06em;font-family:'DM Mono',monospace">HRMS + LEAVE POLICY</strong><br>
+          Implemented a low-cost, accessible HRMS — simple enough for non-tech-savvy floor staff to self-manage attendance, overtime, and leave regularisation without HR involvement. Introduced the company's first formal leave policy alongside it. Automated payslips, leave tracking, and compliance — daily HR paperwork dropped by 80%.
         </div>
       </div>
 
     </div>
 
+    <div class="cs-outcomes-row">
+      <div class="cs-outcome-wide">
+        <span class="cs-stat">~90%</span>
+        <span class="cs-stat-label">Reduction in manual reconciliation — integrated store, inventory &amp; accounts system replaced daily coupon transcription</span>
+      </div>
+      <div class="cs-outcome-wide">
+        <span class="cs-stat">180 hrs</span>
+        <span class="cs-stat-label">Saved per month — data entry executives redeployed to audits and higher-value operational work</span>
+      </div>
+      <div class="cs-outcome-wide">
+        <span class="cs-stat">~30%</span>
+        <span class="cs-stat-label">Production cost savings via QC — rework at department and dispatch level quantified and eliminated</span>
+      </div>
+      <div class="cs-outcome-wide">
+        <span class="cs-stat">80%</span>
+        <span class="cs-stat-label">Reduction in daily HR paperwork — HRMS + leave policy eliminated manual attendance, payslip &amp; leave management</span>
+      </div>
+    </div>
+
+    <div class="cs-footnote">
+      The deeper win wasn't any single system — it was that for the first time, management could see the business clearly. Live data across production, store, accounts, and HR meant decisions could be made on facts rather than instinct. The operating system finally matched the quality of the product.
+    </div>
+
   </div>
+
 </section>
 </div>
 
