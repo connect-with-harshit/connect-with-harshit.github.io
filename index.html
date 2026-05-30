@@ -265,8 +265,8 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
     <a href="#impact">Impact</a>
     <a href="#experience">Experience</a>
     <a href="#systems">Work</a>
-    <a href="#opento">Open To</a>
     <a href="#skills">Skills</a>
+    <a href="#opento">Open To</a>
   </div>
   <div class="nav-right">
     <button class="theme-btn" onclick="toggleTheme()" id="themeBtn"><span class="theme-btn-icon" id="themeBtnIcon">☀️</span><span>Mode</span></button>
@@ -692,6 +692,76 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
 </section>
 </div>
 
+
+<!-- OPEN TO -->
+<div class="full-w" id="opento">
+<section>
+  <div class="section-header fade-up">
+    <span class="sec-label">Availability</span>
+    <h2>Open <em>to.</em></h2>
+    <p class="sec-sub">Currently available for the right opportunity — here's what that looks like.</p>
+  </div>
+
+  <div class="opento-grid fade-up">
+
+    <div class="opento-card">
+      <div class="opento-label">Roles</div>
+      <div class="opento-tags">
+        <span class="opento-tag">Operations Manager</span>
+        <span class="opento-tag">Project Manager</span>
+        <span class="opento-tag">General Manager</span>
+        <span class="opento-tag">Chief of Staff</span>
+        <span class="opento-tag">Business Head</span>
+        <span class="opento-tag">Delivery Head</span>
+      </div>
+    </div>
+
+    <div class="opento-card">
+      <div class="opento-label">Industries</div>
+      <div class="opento-tags">
+        <span class="opento-tag">Furniture &amp; Interior Fit-out</span>
+        <span class="opento-tag">D2C / Retail Ops</span>
+        <span class="opento-tag">Logistics &amp; Last-mile</span>
+        <span class="opento-tag">Real Estate / Hospitality</span>
+        <span class="opento-tag">Growth-stage Startups</span>
+        <span class="opento-tag">Manufacturing</span>
+      </div>
+    </div>
+
+    <div class="opento-card">
+      <div class="opento-label">Engagement</div>
+      <div class="opento-tags">
+        <span class="opento-tag opento-tag--gold">Full-time</span>
+        <span class="opento-tag opento-tag--gold">Consulting</span>
+        <span class="opento-tag opento-tag--gold">Contract</span>
+      </div>
+      <div class="opento-note">Open to on-site, hybrid, or remote depending on role.</div>
+    </div>
+
+    <div class="opento-card opento-card--locations">
+      <div class="opento-label">Locations</div>
+      <div class="opento-locations">
+        <div class="opento-loc"><span class="loc-dot loc-dot--primary"></span>Udaipur <span class="loc-tag">Base</span></div>
+        <div class="opento-loc"><span class="loc-dot"></span>Jaipur</div>
+        <div class="opento-loc"><span class="loc-dot"></span>Jodhpur</div>
+        <div class="opento-loc"><span class="loc-dot"></span>Kota</div>
+        <div class="opento-loc"><span class="loc-dot"></span>Ahmedabad</div>
+        <div class="opento-loc"><span class="loc-dot"></span>Hyderabad</div>
+        <div class="opento-loc"><span class="loc-dot"></span>Gurugram</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="opento-cta fade-up">
+    <p>If this matches what you're looking for —</p>
+    <button class="btn-primary" onclick="openConnect()">Let's Talk →</button>
+  </div>
+
+</section>
+</div>
+
+
 <footer>
   <div class="footer-logo">Harshit Soni</div>
   <div class="footer-line">Building Execution Systems That Scale · Operations & Project Delivery</div>
@@ -777,70 +847,5 @@ const obs=new IntersectionObserver(entries=>{
 document.querySelectorAll('.fade-up').forEach((el,i)=>{el.style.transitionDelay=(i%3)*0.1+'s';obs.observe(el)});
 </script>
 </body>
-</html><!-- OPEN TO -->
-<div class="full-w" id="opento">
-<section>
-  <div class="section-header fade-up">
-    <span class="sec-label">Availability</span>
-    <h2>Open <em>to.</em></h2>
-    <p class="sec-sub">Currently available for the right opportunity — here's what that looks like.</p>
-  </div>
 
-  <div class="opento-grid fade-up">
-
-    <div class="opento-card">
-      <div class="opento-label">Roles</div>
-      <div class="opento-tags">
-        <span class="opento-tag">Operations Manager</span>
-        <span class="opento-tag">Project Manager</span>
-        <span class="opento-tag">General Manager</span>
-        <span class="opento-tag">Chief of Staff</span>
-        <span class="opento-tag">Business Head</span>
-        <span class="opento-tag">Delivery Head</span>
-      </div>
-    </div>
-
-    <div class="opento-card">
-      <div class="opento-label">Industries</div>
-      <div class="opento-tags">
-        <span class="opento-tag">Furniture &amp; Interior Fit-out</span>
-        <span class="opento-tag">D2C / Retail Ops</span>
-        <span class="opento-tag">Logistics &amp; Last-mile</span>
-        <span class="opento-tag">Real Estate / Hospitality</span>
-        <span class="opento-tag">Growth-stage Startups</span>
-        <span class="opento-tag">Manufacturing</span>
-      </div>
-    </div>
-
-    <div class="opento-card">
-      <div class="opento-label">Engagement</div>
-      <div class="opento-tags">
-        <span class="opento-tag opento-tag--gold">Full-time</span>
-        <span class="opento-tag opento-tag--gold">Consulting</span>
-        <span class="opento-tag opento-tag--gold">Contract</span>
-      </div>
-      <div class="opento-note">Open to on-site, hybrid, or remote depending on role.</div>
-    </div>
-
-    <div class="opento-card opento-card--locations">
-      <div class="opento-label">Locations</div>
-      <div class="opento-locations">
-        <div class="opento-loc"><span class="loc-dot loc-dot--primary"></span>Udaipur <span class="loc-tag">Base</span></div>
-        <div class="opento-loc"><span class="loc-dot"></span>Jaipur</div>
-        <div class="opento-loc"><span class="loc-dot"></span>Jodhpur</div>
-        <div class="opento-loc"><span class="loc-dot"></span>Kota</div>
-        <div class="opento-loc"><span class="loc-dot"></span>Ahmedabad</div>
-        <div class="opento-loc"><span class="loc-dot"></span>Hyderabad</div>
-        <div class="opento-loc"><span class="loc-dot"></span>Gurugram</div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="opento-cta fade-up">
-    <p>If this matches what you're looking for —</p>
-    <button class="btn-primary" onclick="openConnect()">Let's Talk →</button>
-  </div>
-
-</section>
-</div>
+</html>
