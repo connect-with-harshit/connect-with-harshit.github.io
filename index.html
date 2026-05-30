@@ -217,6 +217,26 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
 [data-theme="light"] .exp-logo img{filter:grayscale(1) brightness(0.3);opacity:0.5}
 [data-theme="light"] .exp-row:hover .exp-logo img{filter:grayscale(0) brightness(1);opacity:1}
 
+/* OPEN TO */
+.opento-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;border:1px solid var(--border);margin-top:48px}
+.opento-card{padding:32px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg)}
+.opento-card:last-child{border-right:none}
+.opento-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.opento-tags{display:flex;flex-wrap:wrap;gap:8px}
+.opento-tag{font-size:12px;color:var(--text2);border:1px solid var(--border2);padding:5px 12px;border-radius:2px;font-family:'DM Mono',monospace;letter-spacing:0.04em;transition:all .2s}
+.opento-tag:hover{border-color:var(--gold);color:var(--gold)}
+.opento-tag--gold{border-color:var(--gold2);color:var(--gold);background:rgba(180,140,80,0.06)}
+.opento-note{font-size:12px;color:var(--text3);font-family:'Cormorant Garamond',serif;font-style:italic;margin-top:14px;line-height:1.5}
+.opento-card--locations{background:var(--bg2)}
+.opento-locations{display:flex;flex-direction:column;gap:10px}
+.opento-loc{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text2);font-family:'DM Mono',monospace;letter-spacing:0.04em}
+.loc-dot{width:6px;height:6px;border-radius:50%;background:var(--border2);flex-shrink:0}
+.loc-dot--primary{background:var(--gold);box-shadow:0 0 6px var(--gold)}
+.loc-tag{font-size:9px;color:var(--gold);border:1px solid var(--gold2);padding:1px 6px;border-radius:2px;letter-spacing:0.08em;margin-left:4px}
+.opento-cta{margin-top:48px;display:flex;align-items:center;gap:24px}
+.opento-cta p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--text2)}
+@media(max-width:768px){.opento-grid{grid-template-columns:1fr}.opento-card{border-right:none}.opento-cta{flex-direction:column;align-items:flex-start;gap:16px}}
+
 /* FLOATING RESUME BUTTON */
 .resume-fab{position:fixed;bottom:28px;right:28px;z-index:150;display:flex;align-items:center;gap:10px;background:var(--gold);color:var(--bg);padding:14px 20px;border-radius:2px;text-decoration:none;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;box-shadow:0 4px 24px rgba(0,0,0,0.35);transition:all .25s;border:none;cursor:pointer}
 .resume-fab:hover{background:var(--gold-light);transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,0.45)}
@@ -245,6 +265,7 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
     <a href="#impact">Impact</a>
     <a href="#experience">Experience</a>
     <a href="#systems">Work</a>
+    <a href="#opento">Open To</a>
     <a href="#skills">Skills</a>
   </div>
   <div class="nav-right">
@@ -542,9 +563,7 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
           </div>
           <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:10px 14px">
             <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--text3);margin-bottom:4px;letter-spacing:0.06em">INVENTORY · Real-time</div>
-            <div style="display:flex;gap:16px">
-              <div style="font-size:11px;color:var(--text2)">Available ↔ Total In ↔ Total Out</div>
-            </div>
+            <div style="font-size:11px;color:var(--text2)">Available ↔ Total In ↔ Total Out</div>
           </div>
           <div style="background:var(--gold2);border:1px solid var(--border2);border-radius:2px;padding:10px 14px">
             <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--gold);margin-bottom:4px;letter-spacing:0.06em">TALLY EXPORT · Auto-generate</div>
@@ -561,7 +580,7 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
       <div class="system-body">
         <div class="system-org">Arten Space · Google Sheets</div>
         <div class="system-title">Material Consumption & Inventory System</div>
-        <div class="system-desc">5-tab operational ledger tracking every material movement across the factory floor. Auto-generates Tally-compatible Stock Journal entries by date via a custom Apps Script sidebar. Dual-verification controls on all inward stock. Eliminated ~90% of manual reconciliation effort.</div>
+        <div class="system-desc">5-tab operational ledger tracking every material movement across the factory floor. Auto-generates Tally-compatible Stock Journal entries via a custom Apps Script sidebar. Dual-verification on all inward stock. Eliminated ~90% of manual reconciliation effort.</div>
         <div class="system-pills">
           <span class="system-pill">Google Sheets</span>
           <span class="system-pill">Apps Script</span>
@@ -571,15 +590,15 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
         <div class="system-footer">
           <div style="display:flex;gap:20px">
             <div class="system-stat"><div class="system-stat-n">11K+</div><div class="system-stat-l">Material entries</div></div>
-            <div class="system-stat"><div class="system-stat-n">~90%</div><div class="system-stat-l">Reconciliation effort cut</div></div>
-            <div class="system-stat"><div class="system-stat-n">180h</div><div class="system-stat-l">Saved per month</div></div>
+            <div class="system-stat"><div class="system-stat-n">~90%</div><div class="system-stat-l">Reconciliation cut</div></div>
+            <div class="system-stat"><div class="system-stat-n">180h</div><div class="system-stat-l">Saved / month</div></div>
           </div>
           <span class="system-link disabled">Demo Soon</span>
         </div>
       </div>
     </div>
 
-    <!-- Card 3: Production Productivity Tracker -->
+    <!-- Card 3: Production Intelligence Tracker -->
     <div class="system-card fade-up">
       <div class="system-preview" style="background:var(--bg4)">
         <div style="width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:20px;gap:10px">
@@ -758,4 +777,70 @@ const obs=new IntersectionObserver(entries=>{
 document.querySelectorAll('.fade-up').forEach((el,i)=>{el.style.transitionDelay=(i%3)*0.1+'s';obs.observe(el)});
 </script>
 </body>
-</html>
+</html><!-- OPEN TO -->
+<div class="full-w" id="opento">
+<section>
+  <div class="section-header fade-up">
+    <span class="sec-label">Availability</span>
+    <h2>Open <em>to.</em></h2>
+    <p class="sec-sub">Currently available for the right opportunity — here's what that looks like.</p>
+  </div>
+
+  <div class="opento-grid fade-up">
+
+    <div class="opento-card">
+      <div class="opento-label">Roles</div>
+      <div class="opento-tags">
+        <span class="opento-tag">Operations Manager</span>
+        <span class="opento-tag">Project Manager</span>
+        <span class="opento-tag">General Manager</span>
+        <span class="opento-tag">Chief of Staff</span>
+        <span class="opento-tag">Business Head</span>
+        <span class="opento-tag">Delivery Head</span>
+      </div>
+    </div>
+
+    <div class="opento-card">
+      <div class="opento-label">Industries</div>
+      <div class="opento-tags">
+        <span class="opento-tag">Furniture &amp; Interior Fit-out</span>
+        <span class="opento-tag">D2C / Retail Ops</span>
+        <span class="opento-tag">Logistics &amp; Last-mile</span>
+        <span class="opento-tag">Real Estate / Hospitality</span>
+        <span class="opento-tag">Growth-stage Startups</span>
+        <span class="opento-tag">Manufacturing</span>
+      </div>
+    </div>
+
+    <div class="opento-card">
+      <div class="opento-label">Engagement</div>
+      <div class="opento-tags">
+        <span class="opento-tag opento-tag--gold">Full-time</span>
+        <span class="opento-tag opento-tag--gold">Consulting</span>
+        <span class="opento-tag opento-tag--gold">Contract</span>
+      </div>
+      <div class="opento-note">Open to on-site, hybrid, or remote depending on role.</div>
+    </div>
+
+    <div class="opento-card opento-card--locations">
+      <div class="opento-label">Locations</div>
+      <div class="opento-locations">
+        <div class="opento-loc"><span class="loc-dot loc-dot--primary"></span>Udaipur <span class="loc-tag">Base</span></div>
+        <div class="opento-loc"><span class="loc-dot"></span>Jaipur</div>
+        <div class="opento-loc"><span class="loc-dot"></span>Jodhpur</div>
+        <div class="opento-loc"><span class="loc-dot"></span>Kota</div>
+        <div class="opento-loc"><span class="loc-dot"></span>Ahmedabad</div>
+        <div class="opento-loc"><span class="loc-dot"></span>Hyderabad</div>
+        <div class="opento-loc"><span class="loc-dot"></span>Gurugram</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="opento-cta fade-up">
+    <p>If this matches what you're looking for —</p>
+    <button class="btn-primary" onclick="openConnect()">Let's Talk →</button>
+  </div>
+
+</section>
+</div>
