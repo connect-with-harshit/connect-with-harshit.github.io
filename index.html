@@ -176,28 +176,38 @@ h2 em{font-family:'Alta Caption',sans-serif;font-size:1em;text-transform:upperca
 .skill-tag:hover{border-color:var(--gold);color:var(--gold)}
 
 /* SYSTEMS BUILT */
-.systems-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;margin-top:48px}
-.system-card{background:var(--bg2);border:1px solid var(--border);border-radius:2px;overflow:hidden;transition:border-color .25s,transform .25s;display:flex;flex-direction:column}
-.system-card:hover{border-color:var(--border2);transform:translateY(-3px)}
-.system-preview{position:relative;height:200px;overflow:hidden;background:var(--bg3);border-bottom:1px solid var(--border)}
-.system-preview img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s;filter:brightness(0.92)}
-.system-card:hover .system-preview img{transform:scale(1.04);filter:brightness(1)}
-.system-preview-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:48px;background:var(--bg4)}
-.system-badge{position:absolute;top:12px;right:12px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;padding:4px 10px;border-radius:2px;background:var(--gold);color:var(--bg);font-weight:500}
+/* SYSTEMS — compact horizontal rows */
+.systems-grid{display:flex;flex-direction:column;gap:0;margin-top:40px;border:1px solid var(--border)}
+.system-card{display:grid;grid-template-columns:200px 1fr auto;align-items:stretch;border-bottom:1px solid var(--border);transition:background .2s;background:var(--bg)}
+.system-card:last-child{border-bottom:none}
+.system-card:hover{background:var(--bg2)}
+.system-preview{position:relative;overflow:hidden;background:var(--bg3);border-right:1px solid var(--border);min-height:120px;display:flex;align-items:center;justify-content:center}
+.system-preview img{width:100%;height:100%;object-fit:cover;object-position:top;filter:brightness(0.88);transition:filter .3s}
+.system-card:hover .system-preview img{filter:brightness(1)}
+.system-preview-placeholder{font-size:32px;color:var(--text3)}
+.system-badge{position:absolute;top:8px;left:8px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.08em;padding:3px 8px;border-radius:2px;background:var(--gold);color:var(--bg)}
 .system-badge.internal{background:var(--bg4);border:1px solid var(--border2);color:var(--text3)}
-.system-body{padding:24px;flex:1;display:flex;flex-direction:column}
-.system-org{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
-.system-title{font-family:'Alta Caption',sans-serif;font-size:16px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);margin-bottom:10px;line-height:1.2}
-.system-desc{font-size:13px;color:var(--text2);line-height:1.65;flex:1;margin-bottom:16px}
-.system-pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
-.system-pill{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.04em;padding:3px 9px;border:1px solid var(--border);color:var(--text3);border-radius:2px}
-.system-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px solid var(--border)}
-.system-stat{text-align:center}
-.system-stat-n{font-family:'Alta Caption',sans-serif;font-size:18px;color:var(--gold);letter-spacing:0.06em;line-height:1}
-.system-stat-l{font-family:'DM Mono',monospace;font-size:9px;color:var(--text3);letter-spacing:0.06em;margin-top:2px;text-transform:uppercase}
-.system-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--border2);padding:7px 14px;border-radius:2px;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.system-body{padding:16px 20px;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.system-org{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold)}
+.system-title{font-family:'Alta Caption',sans-serif;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text);line-height:1.2}
+.system-desc{font-size:12px;color:var(--text2);line-height:1.55;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.system-pills{display:flex;flex-wrap:wrap;gap:4px}
+.system-pill{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.04em;padding:2px 7px;border:1px solid var(--border);color:var(--text3);border-radius:2px}
+.system-footer{display:none}
+.system-right{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:10px;padding:16px 20px;border-left:1px solid var(--border);min-width:140px}
+.system-stats-col{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.system-stat{text-align:right}
+.system-stat-n{font-family:'Alta Caption',sans-serif;font-size:15px;color:var(--gold);letter-spacing:0.06em;line-height:1;display:block}
+.system-stat-l{font-family:'DM Mono',monospace;font-size:9px;color:var(--text3);letter-spacing:0.04em;text-transform:uppercase}
+.system-link{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--border2);padding:6px 12px;border-radius:2px;transition:all .2s;white-space:nowrap}
 .system-link:hover{background:var(--gold);color:var(--bg);border-color:var(--gold)}
-.system-link.disabled{color:var(--text3);border-color:var(--border);pointer-events:none;cursor:default}
+.system-link.disabled{color:var(--text3);border-color:var(--border);pointer-events:none}
+@media(max-width:700px){
+  .system-card{grid-template-columns:1fr}
+  .system-preview{min-height:80px;border-right:none;border-bottom:1px solid var(--border)}
+  .system-right{border-left:none;border-top:1px solid var(--border);flex-direction:row;align-items:center;justify-content:space-between}
+  .system-stats-col{flex-direction:row;gap:14px}
+}
 
 /* FOOTER */
 footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
@@ -710,165 +720,118 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
       <div class="system-body">
         <div class="system-org">Arten Space · Web App</div>
         <div class="system-title">Production Floor Dashboard</div>
-        <div class="system-desc">Real-time project tracking across all active manufacturing jobs — status, progress, department activity, and material drill-down. Syncs live with Google Sheets backend. Built solo, deployed in daily use.</div>
+        <div class="system-desc">Real-time project tracking across all active manufacturing jobs — status, progress, department activity, and material drill-down. Syncs live from Google Sheets.</div>
         <div class="system-pills">
           <span class="system-pill">HTML / CSS / JS</span>
           <span class="system-pill">Google Sheets API</span>
           <span class="system-pill">GitHub Pages</span>
           <span class="system-pill">Real-time Sync</span>
         </div>
-        <div class="system-footer">
-          <div style="display:flex;gap:20px">
-            <div class="system-stat"><div class="system-stat-n">295</div><div class="system-stat-l">Projects tracked</div></div>
-            <div class="system-stat"><div class="system-stat-n">2,307</div><div class="system-stat-l">Total products</div></div>
-            <div class="system-stat"><div class="system-stat-n">6</div><div class="system-stat-l">Status views</div></div>
-          </div>
-          <a class="system-link" href="https://hsartenspace.github.io/Production-Dashboard/" target="_blank" rel="noopener">View Live ↗</a>
+      </div>
+      <div class="system-right">
+        <div class="system-stats-col">
+          <div class="system-stat"><span class="system-stat-n">295</span><span class="system-stat-l">Projects</span></div>
+          <div class="system-stat"><span class="system-stat-n">2,307</span><span class="system-stat-l">Products</span></div>
         </div>
+        <a class="system-link" href="https://hsartenspace.github.io/Production-Dashboard/" target="_blank" rel="noopener">View Live ↗</a>
       </div>
     </div>
 
     <!-- Card 2: Material Consumption & Inventory System -->
     <div class="system-card fade-up">
       <div class="system-preview" style="background:var(--bg4)">
-        <div style="width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:20px;gap:8px">
-          <div style="display:flex;gap:8px;align-items:center">
-            <div style="background:var(--gold2);border:1px solid var(--border2);border-radius:2px;padding:6px 12px;font-family:'DM Mono',monospace;font-size:10px;color:var(--gold)">OUT · 11,792 rows</div>
-            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:6px 12px;font-family:'DM Mono',monospace;font-size:10px;color:var(--text3)">IN · Stock receipts</div>
+        <div style="padding:14px;width:100%;display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;gap:6px">
+            <div style="background:var(--gold2);border:1px solid var(--border2);border-radius:2px;padding:4px 8px;font-family:'DM Mono',monospace;font-size:9px;color:var(--gold)">OUT · 11,792 rows</div>
+            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:4px 8px;font-family:'DM Mono',monospace;font-size:9px;color:var(--text3)">IN · Stock receipts</div>
           </div>
-          <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:10px 14px">
-            <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--text3);margin-bottom:4px;letter-spacing:0.06em">INVENTORY · Real-time</div>
-            <div style="font-size:11px;color:var(--text2)">Available ↔ Total In ↔ Total Out</div>
-          </div>
-          <div style="background:var(--gold2);border:1px solid var(--border2);border-radius:2px;padding:10px 14px">
-            <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--gold);margin-bottom:4px;letter-spacing:0.06em">TALLY EXPORT · Auto-generate</div>
-            <div style="font-size:11px;color:var(--text2)">Stock Journal → One click → Tally-ready</div>
-          </div>
-          <div style="display:flex;gap:8px">
-            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:4px 10px;font-family:'DM Mono',monospace;font-size:9px;color:var(--text3)">List of Codes</div>
-            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:4px 10px;font-family:'DM Mono',monospace;font-size:9px;color:var(--text3)">Dual Verification</div>
-            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:4px 10px;font-family:'DM Mono',monospace;font-size:9px;color:var(--text3)">Apps Script</div>
-          </div>
+          <div style="background:var(--gold2);border:1px solid var(--border2);border-radius:2px;padding:6px 10px;font-family:'DM Mono',monospace;font-size:9px;color:var(--gold)">TALLY EXPORT · 1-click → Tally-ready</div>
         </div>
         <span class="system-badge internal">Internal</span>
       </div>
       <div class="system-body">
         <div class="system-org">Arten Space · Google Sheets</div>
         <div class="system-title">Material Consumption & Inventory System</div>
-        <div class="system-desc">5-tab operational ledger tracking every material movement across the factory floor. Auto-generates Tally-compatible Stock Journal entries via a custom Apps Script sidebar. Dual-verification on all inward stock. Eliminated ~90% of manual reconciliation effort.</div>
+        <div class="system-desc">5-tab live ledger tracking every material movement. Auto-generates Tally Stock Journal entries via Apps Script. Dual-verification on all inward stock.</div>
         <div class="system-pills">
           <span class="system-pill">Google Sheets</span>
           <span class="system-pill">Apps Script</span>
           <span class="system-pill">Tally Integration</span>
           <span class="system-pill">Inventory Control</span>
         </div>
-        <div class="system-footer">
-          <div style="display:flex;gap:20px">
-            <div class="system-stat"><div class="system-stat-n">11K+</div><div class="system-stat-l">Material entries</div></div>
-            <div class="system-stat"><div class="system-stat-n">~90%</div><div class="system-stat-l">Reconciliation cut</div></div>
-            <div class="system-stat"><div class="system-stat-n">180h</div><div class="system-stat-l">Saved / month</div></div>
-          </div>
-          <span class="system-link disabled">Demo Soon</span>
+      </div>
+      <div class="system-right">
+        <div class="system-stats-col">
+          <div class="system-stat"><span class="system-stat-n">11K+</span><span class="system-stat-l">Entries</span></div>
+          <div class="system-stat"><span class="system-stat-n">180h</span><span class="system-stat-l">Saved/mo</span></div>
         </div>
+        <span class="system-link disabled">Demo Soon</span>
       </div>
     </div>
 
     <!-- Card 3: Production Intelligence Tracker -->
     <div class="system-card fade-up">
       <div class="system-preview" style="background:var(--bg4)">
-        <div style="width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:20px;gap:10px">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
-            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:8px;text-align:center">
-              <div style="font-family:'Alta Caption',sans-serif;font-size:18px;color:var(--gold);letter-spacing:0.06em">8</div>
-              <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--text3);margin-top:2px">Departments</div>
-            </div>
-            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:8px;text-align:center">
-              <div style="font-family:'Alta Caption',sans-serif;font-size:18px;color:var(--gold);letter-spacing:0.06em">Daily</div>
-              <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--text3);margin-top:2px">Granularity</div>
-            </div>
-            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:8px;text-align:center">
-              <div style="font-family:'Alta Caption',sans-serif;font-size:18px;color:var(--gold);letter-spacing:0.06em">QC</div>
-              <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--text3);margin-top:2px">Pass / Reject rates</div>
-            </div>
-            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:8px;text-align:center">
-              <div style="font-family:'Alta Caption',sans-serif;font-size:18px;color:var(--gold);letter-spacing:0.06em">WIP</div>
-              <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--text3);margin-top:2px">Flow tracking</div>
-            </div>
-          </div>
-          <div style="background:var(--gold2);border:1px solid var(--border2);border-radius:2px;padding:8px 12px;font-family:'DM Mono',monospace;font-size:10px;color:var(--gold)">
-            SW-Machining · SW-Assembly · Metal · Upholstery · Paint · QC · Packing · Handover
-          </div>
+        <div style="padding:14px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:5px">
+          <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:6px;text-align:center"><div style="font-family:'Alta Caption',sans-serif;font-size:15px;color:var(--gold)">8</div><div style="font-family:'DM Mono',monospace;font-size:8px;color:var(--text3)">Depts</div></div>
+          <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:6px;text-align:center"><div style="font-family:'Alta Caption',sans-serif;font-size:15px;color:var(--gold)">Daily</div><div style="font-family:'DM Mono',monospace;font-size:8px;color:var(--text3)">Granularity</div></div>
+          <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:6px;text-align:center"><div style="font-family:'Alta Caption',sans-serif;font-size:15px;color:var(--gold)">QC</div><div style="font-family:'DM Mono',monospace;font-size:8px;color:var(--text3)">Pass/Reject</div></div>
+          <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:6px;text-align:center"><div style="font-family:'Alta Caption',sans-serif;font-size:15px;color:var(--gold)">WIP</div><div style="font-family:'DM Mono',monospace;font-size:8px;color:var(--text3)">Flow</div></div>
         </div>
         <span class="system-badge internal">Internal</span>
       </div>
       <div class="system-body">
         <div class="system-org">Arten Space · Google Sheets</div>
         <div class="system-title">Production Intelligence Tracker</div>
-        <div class="system-desc">8-department daily production tracker covering WIP flow, units assembled, rework loops, QC pass/reject rates, escalation flags, workforce availability, and weekly productivity scoring. QC view generates automated pivot charts for leadership review.</div>
+        <div class="system-desc">8-department daily tracker: WIP flow, assembly, rework loops, QC rates, escalation flags, workforce availability, and weekly productivity scoring with auto pivot charts.</div>
         <div class="system-pills">
           <span class="system-pill">Google Sheets</span>
           <span class="system-pill">Pivot Charts</span>
           <span class="system-pill">8 Departments</span>
           <span class="system-pill">QC Analytics</span>
         </div>
-        <div class="system-footer">
-          <div style="display:flex;gap:20px">
-            <div class="system-stat"><div class="system-stat-n">8</div><div class="system-stat-l">Dept tabs</div></div>
-            <div class="system-stat"><div class="system-stat-n">20+</div><div class="system-stat-l">Daily metrics</div></div>
-            <div class="system-stat"><div class="system-stat-n">Weekly</div><div class="system-stat-l">Auto QC scoring</div></div>
-          </div>
-          <span class="system-link disabled">Demo Soon</span>
+      </div>
+      <div class="system-right">
+        <div class="system-stats-col">
+          <div class="system-stat"><span class="system-stat-n">20+</span><span class="system-stat-l">Metrics/day</span></div>
+          <div class="system-stat"><span class="system-stat-n">Weekly</span><span class="system-stat-l">QC score</span></div>
         </div>
+        <span class="system-link disabled">Demo Soon</span>
       </div>
     </div>
 
     <!-- Card 4: Furniture Catalogue & Quotation Tool -->
     <div class="system-card fade-up">
       <div class="system-preview" style="background:var(--bg4)">
-        <div style="width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:20px;gap:8px">
-          <div style="display:flex;gap:8px;align-items:center;margin-bottom:2px">
-            <div style="background:var(--gold2);border:1px solid var(--border2);border-radius:2px;padding:5px 10px;font-family:'DM Mono',monospace;font-size:9px;color:var(--gold);letter-spacing:0.06em">AI DRAFT · Auto-generated</div>
-            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:5px 10px;font-family:'DM Mono',monospace;font-size:9px;color:var(--text3);letter-spacing:0.06em">REVIEW · Freeze</div>
-          </div>
-          <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:10px 14px">
-            <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--text3);margin-bottom:6px;letter-spacing:0.06em">PRODUCT SHEET · Live Preview</div>
-            <div style="display:flex;gap:6px;flex-wrap:wrap">
-              <div style="background:var(--bg4);border:1px solid var(--border);border-radius:2px;padding:3px 8px;font-size:10px;color:var(--text2)">W / D / H mm</div>
-              <div style="background:var(--bg4);border:1px solid var(--border);border-radius:2px;padding:3px 8px;font-size:10px;color:var(--text2)">Materials</div>
-              <div style="background:var(--bg4);border:1px solid var(--border);border-radius:2px;padding:3px 8px;font-size:10px;color:var(--text2)">INR / USD</div>
-            </div>
-          </div>
-          <div style="background:var(--gold2);border:1px solid var(--border2);border-radius:2px;padding:8px 12px">
-            <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--gold);margin-bottom:3px;letter-spacing:0.06em">EXPORT · PDF + Catalogue Index</div>
-            <div style="font-size:10px;color:var(--text2)">Luxury A4 spec sheet → one click</div>
-          </div>
+        <div style="padding:14px;width:100%;display:flex;flex-direction:column;gap:6px">
           <div style="display:flex;gap:6px">
-            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:4px 8px;font-family:'DM Mono',monospace;font-size:9px;color:var(--text3)">Local-first</div>
-            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:4px 8px;font-family:'DM Mono',monospace;font-size:9px;color:var(--text3)">No cloud</div>
-            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:4px 8px;font-family:'DM Mono',monospace;font-size:9px;color:var(--text3)">AI-assisted</div>
+            <div style="background:var(--gold2);border:1px solid var(--border2);border-radius:2px;padding:4px 8px;font-family:'DM Mono',monospace;font-size:9px;color:var(--gold)">AI DRAFT · Auto-generated</div>
           </div>
+          <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:6px 10px">
+            <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--text3);margin-bottom:3px">PRODUCT SHEET · Live Preview</div>
+            <div style="display:flex;gap:4px"><div style="background:var(--bg4);border:1px solid var(--border);border-radius:2px;padding:2px 6px;font-size:9px;color:var(--text2)">W/D/H mm</div><div style="background:var(--bg4);border:1px solid var(--border);border-radius:2px;padding:2px 6px;font-size:9px;color:var(--text2)">Materials</div><div style="background:var(--bg4);border:1px solid var(--border);border-radius:2px;padding:2px 6px;font-size:9px;color:var(--text2)">INR/USD</div></div>
+          </div>
+          <div style="background:var(--gold2);border:1px solid var(--border2);border-radius:2px;padding:4px 10px;font-family:'DM Mono',monospace;font-size:9px;color:var(--gold)">EXPORT · PDF + Catalogue Index</div>
         </div>
         <span class="system-badge">● Live</span>
       </div>
       <div class="system-body">
         <div class="system-org">I.EVO · Web App</div>
         <div class="system-title">Furniture Catalogue & Quotation Tool</div>
-        <div class="system-desc">Upload a furniture image → AI generates a full product draft (dimensions, materials, cost range in INR & USD) → review, freeze, and export a luxury A4 spec sheet PDF. Built to eliminate repeated R&D cycles and turn the standard product library into a living, queryable catalogue.</div>
+        <div class="system-desc">Upload a furniture image → AI generates a full product draft (dimensions, materials, cost in INR & USD) → review, freeze, export a luxury A4 spec sheet PDF.</div>
         <div class="system-pills">
           <span class="system-pill">HTML / CSS / JS</span>
           <span class="system-pill">AI Vision API</span>
           <span class="system-pill">PDF Export</span>
-          <span class="system-pill">Local-first</span>
           <span class="system-pill">GitHub Pages</span>
         </div>
-        <div class="system-footer">
-          <div style="display:flex;gap:20px">
-            <div class="system-stat"><div class="system-stat-n">~70%</div><div class="system-stat-l">PM effort saved</div></div>
-            <div class="system-stat"><div class="system-stat-n">4</div><div class="system-stat-l">Stage workflow</div></div>
-            <div class="system-stat"><div class="system-stat-n">INR+USD</div><div class="system-stat-l">Dual costing</div></div>
-          </div>
-          <a class="system-link" href="https://connect-with-harshit.github.io/costing-library-tool/" target="_blank" rel="noopener">View Live ↗</a>
+      </div>
+      <div class="system-right">
+        <div class="system-stats-col">
+          <div class="system-stat"><span class="system-stat-n">~70%</span><span class="system-stat-l">PM effort saved</span></div>
+          <div class="system-stat"><span class="system-stat-n">INR+USD</span><span class="system-stat-l">Dual costing</span></div>
         </div>
+        <a class="system-link" href="https://connect-with-harshit.github.io/costing-library-tool/" target="_blank" rel="noopener">View Live ↗</a>
       </div>
     </div>
 
