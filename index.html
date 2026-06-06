@@ -379,7 +379,7 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
 .resume-fab:hover{background:var(--gold-light);transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,0.45)}
 .resume-fab svg{width:15px;height:15px;flex-shrink:0}
 @media(max-width:768px){.resume-fab{bottom:20px;right:16px;padding:12px 16px;font-size:10px}}
-.fade-up{opacity:0;transform:translateY(20px);transition:opacity .65s,transform .65s}
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.22,.68,0,1.2),transform .75s cubic-bezier(.22,.68,0,1.2)}
 .fade-up.visible{opacity:1;transform:none}
 
 @media(max-width:768px){
@@ -398,6 +398,75 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
   max-width: 100% !important; max-height: 100% !important;
   object-fit: contain !important;
 }
+
+/* ── Shimmer on impact cells ── */
+.impact-cell{position:relative;overflow:hidden}
+.impact-cell::after{
+  content:'';
+  position:absolute;
+  top:0;left:-100%;
+  width:60%;height:100%;
+  background:linear-gradient(105deg,transparent 40%,rgba(201,168,76,.18) 50%,transparent 60%);
+  transition:left .55s ease;
+  pointer-events:none;
+}
+.impact-cell:hover::after{left:160%}
+
+/* ── Magnetic cursor custom ── */
+.magnetic{display:inline-flex;transition:transform .18s cubic-bezier(.22,.68,0,1.2)}
+
+/* ── Hero parallax spans ── */
+.hero-first,.hero-last{display:block;will-change:transform}
+
+/* ── Hero background layers ── */
+.hero-bg{
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  pointer-events:none;
+  z-index:0;
+  overflow:hidden;
+}
+#hero-canvas{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  opacity:.55;
+}
+.hero-mesh{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse 70% 60% at 20% 50%, rgba(201,168,76,.07) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 70% at 80% 30%, rgba(201,168,76,.05) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 50% at 60% 80%, rgba(160,130,60,.04) 0%, transparent 60%);
+  animation:meshDrift 14s ease-in-out infinite alternate;
+  opacity:1;
+}
+[data-theme="light"] .hero-mesh{
+  background:
+    radial-gradient(ellipse 70% 60% at 20% 50%, rgba(154,116,40,.06) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 70% at 80% 30%, rgba(154,116,40,.04) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 50% at 60% 80%, rgba(120,90,30,.03) 0%, transparent 60%);
+}
+[data-theme="light"] #hero-canvas{opacity:.35;}
+@media(prefers-color-scheme:light){
+  :root:not([data-theme="dark"]) .hero-mesh{
+    background:
+      radial-gradient(ellipse 70% 60% at 20% 50%, rgba(154,116,40,.06) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 70% at 80% 30%, rgba(154,116,40,.04) 0%, transparent 65%),
+      radial-gradient(ellipse 40% 50% at 60% 80%, rgba(120,90,30,.03) 0%, transparent 60%);
+  }
+  :root:not([data-theme="dark"]) #hero-canvas{opacity:.35;}
+}
+@keyframes meshDrift{
+  0%  {transform:translate(0,0) scale(1)}
+  33% {transform:translate(18px,-12px) scale(1.02)}
+  66% {transform:translate(-12px,16px) scale(0.99)}
+  100%{transform:translate(10px,-8px) scale(1.01)}
+}
+/* ensure hero content sits above bg */
+.hero > *:not(.hero-bg){position:relative;z-index:1}
 </style>
 </head>
 <body>
@@ -416,11 +485,12 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
   </div>
   <div class="nav-right">
     <button class="theme-btn" onclick="toggleTheme()" id="themeBtn"><span class="theme-btn-icon" id="themeBtnIcon">☀️</span><span>Mode</span></button>
-    <button class="connect-btn" onclick="openConnect()">Let's Connect</button>
+    <button class="connect-btn magnetic" onclick="openConnect()">Let's Connect</button>
   </div>
 </nav>
 
 <div class="hero">
+  <div class="hero-bg"><canvas id="hero-canvas"></canvas><div class="hero-mesh"></div></div>
   <div class="hero-rule"></div>
   <div class="hero-eyebrow">Operations & Project Leadership · Open to opportunities</div>
   <div class="hero-name-block">
@@ -492,16 +562,16 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
     <p class="sec-sub">Outcomes from the work — not responsibilities from the JD.</p>
   </div>
   <div class="impact-grid">
-    <div class="impact-cell fade-up"><div class="impact-n">6×</div><div class="impact-d">Home delivery volume growth at Spinny NCR</div><div class="impact-c">50 → 300 units/month · 18 months</div><div class="impact-ctx">NCR region scaled from a pilot to the highest-volume hub before framework went national</div></div>
-    <div class="impact-cell fade-up"><div class="impact-n">1K+</div><div class="impact-d">Monthly deliveries by Dec 2022</div><div class="impact-c">NCR region · Spinny</div><div class="impact-ctx">Peak milestone achieved within 2 years of joining as Analyst — entire ops built ground up</div></div>
-    <div class="impact-cell fade-up"><div class="impact-n">130%</div><div class="impact-d">Sales growth as Operations Manager</div><div class="impact-c">WoodenStreet · Feb 2023 – Jan 2024</div><div class="impact-ctx">Across multi-city retail stores; driven by B2B pipeline, SOPs, and cross-team execution</div></div>
-    <div class="impact-cell fade-up"><div class="impact-n">~70%</div><div class="impact-d">Manual effort reduced via standardization</div><div class="impact-c">I.EVO · PM team · 2024–25</div><div class="impact-ctx">Product library + SOPs replaced ad-hoc appraisal effort, enabling PM team to handle more with less</div></div>
-    <div class="impact-cell fade-up"><div class="impact-n">100%</div><div class="impact-d">Fiscal discipline on store-level OpEx</div><div class="impact-c">WoodenStreet · multi-city</div><div class="impact-ctx">Zero petty cash leakage across all stores; implemented audit-ready controls from scratch</div></div>
-    <div class="impact-cell fade-up"><div class="impact-n">2×</div><div class="impact-d">Promoted in 2 years at Spinny</div><div class="impact-c">Analyst → Manager → Asst. Ops Head</div><div class="impact-ctx">Only person in cohort promoted twice; took over full NCR delivery operations at Asst. Manager level</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n counter-val" data-target="6.0" data-prefix="" data-suffix="×">6×</div><div class="impact-d">Home delivery volume growth at Spinny NCR</div><div class="impact-c">50 → 300 units/month · 18 months</div><div class="impact-ctx">NCR region scaled from a pilot to the highest-volume hub before framework went national</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n counter-val" data-target="1.0" data-prefix="" data-suffix="K+">1K+</div><div class="impact-d">Monthly deliveries by Dec 2022</div><div class="impact-c">NCR region · Spinny</div><div class="impact-ctx">Peak milestone achieved within 2 years of joining as Analyst — entire ops built ground up</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n counter-val" data-target="130.0" data-prefix="" data-suffix="%">130%</div><div class="impact-d">Sales growth as Operations Manager</div><div class="impact-c">WoodenStreet · Feb 2023 – Jan 2024</div><div class="impact-ctx">Across multi-city retail stores; driven by B2B pipeline, SOPs, and cross-team execution</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n counter-val" data-target="70.0" data-prefix="~" data-suffix="%">~70%</div><div class="impact-d">Manual effort reduced via standardization</div><div class="impact-c">I.EVO · PM team · 2024–25</div><div class="impact-ctx">Product library + SOPs replaced ad-hoc appraisal effort, enabling PM team to handle more with less</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n counter-val" data-target="100.0" data-prefix="" data-suffix="%">100%</div><div class="impact-d">Fiscal discipline on store-level OpEx</div><div class="impact-c">WoodenStreet · multi-city</div><div class="impact-ctx">Zero petty cash leakage across all stores; implemented audit-ready controls from scratch</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n counter-val" data-target="2.0" data-prefix="" data-suffix="×">2×</div><div class="impact-d">Promoted in 2 years at Spinny</div><div class="impact-c">Analyst → Manager → Asst. Ops Head</div><div class="impact-ctx">Only person in cohort promoted twice; took over full NCR delivery operations at Asst. Manager level</div></div>
     <div class="impact-cell fade-up"><div class="impact-n">PAN🇮🇳</div><div class="impact-d">Delivery framework rolled out nationwide</div><div class="impact-c">Built from scratch · Spinny</div><div class="impact-ctx">Home Delivery SOP designed for NCR was adopted as the national standard across all Spinny cities</div></div>
-    <div class="impact-cell fade-up"><div class="impact-n">45%</div><div class="impact-d">Premium deliveries via flatbed trucks</div><div class="impact-c">Spinny NCR · ~1,000 monthly deliveries</div><div class="impact-ctx">Elevated used-car delivery experience; nearly half of all NCR deliveries executed at premium service level</div></div>
-    <div class="impact-cell fade-up"><div class="impact-n">~90%</div><div class="impact-d">Manual reconciliation effort eliminated</div><div class="impact-c">Store–Inventory–Accounts · Arten Space</div><div class="impact-ctx">Integrated transaction system replaced daily manual entry; freed executives for audit and higher-value work</div></div>
-    <div class="impact-cell fade-up"><div class="impact-n">180 hrs</div><div class="impact-d">Saved per month via process automation</div><div class="impact-c">Arten Space · Dec 2025 onwards</div><div class="impact-ctx">Digitised production workflows removed handwritten tokens; MIS staff redeployed to critical operations</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n counter-val" data-target="45.0" data-prefix="" data-suffix="%">45%</div><div class="impact-d">Premium deliveries via flatbed trucks</div><div class="impact-c">Spinny NCR · ~1,000 monthly deliveries</div><div class="impact-ctx">Elevated used-car delivery experience; nearly half of all NCR deliveries executed at premium service level</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n counter-val" data-target="90.0" data-prefix="~" data-suffix="%">~90%</div><div class="impact-d">Manual reconciliation effort eliminated</div><div class="impact-c">Store–Inventory–Accounts · Arten Space</div><div class="impact-ctx">Integrated transaction system replaced daily manual entry; freed executives for audit and higher-value work</div></div>
+    <div class="impact-cell fade-up"><div class="impact-n counter-val" data-target="180.0" data-prefix="" data-suffix="hrs">180 hrs</div><div class="impact-d">Saved per month via process automation</div><div class="impact-c">Arten Space · Dec 2025 onwards</div><div class="impact-ctx">Digitised production workflows removed handwritten tokens; MIS staff redeployed to critical operations</div></div>
   </div>
 </section>
 </div>
@@ -1248,7 +1318,7 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
     <a href="mailto:hsudr007@gmail.com">Email</a>
     <a href="tel:+919680641234">+91 96806 41234</a>
   </div>
-  <button class="connect-btn" onclick="openConnect()" style="margin-bottom:28px">Let's Connect</button>
+  <button class="connect-btn magnetic" onclick="openConnect()" style="margin-bottom:28px">Let's Connect</button>
   <div class="footer-edu">B.Tech, Automobile Engineering · GITS Udaipur · 2020 &nbsp;·&nbsp; Hindi &amp; English</div>
   <div class="footer-copy">© 2026 Harshit Soni · Udaipur, Rajasthan, India</div>
 </footer>
@@ -1355,6 +1425,211 @@ function closeExp() {
   document.getElementById('expOverlay').classList.remove('open');
   document.body.style.overflow = '';
 }
+
+
+// ── 1. SPRING FADE-UP (already handled by CSS cubic-bezier) ──
+// IntersectionObserver already wired — just ensure stagger still works
+document.querySelectorAll('.fade-up').forEach((el,i)=>{
+  if(!el.style.transitionDelay){
+    el.style.transitionDelay = (i % 4) * 0.09 + 's';
+  }
+});
+
+// ── 2. NUMBER COUNTER on scroll ──
+(function(){
+  const ease = t => t < .5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1;
+  const duration = 1400;
+  function animateCounter(el){
+    if(el.dataset.animated) return;
+    el.dataset.animated = '1';
+    const target = parseFloat(el.dataset.target);
+    const prefix = el.dataset.prefix || '';
+    const suffix = el.dataset.suffix || '';
+    const isInt = Number.isInteger(target);
+    const start = performance.now();
+    function step(now){
+      const p = Math.min((now - start) / duration, 1);
+      const val = target * ease(p);
+      const display = isInt ? Math.round(val).toLocaleString() : val.toFixed(1);
+      el.textContent = prefix + display + suffix;
+      if(p < 1) requestAnimationFrame(step);
+      else el.textContent = prefix + (isInt ? target.toLocaleString() : target) + suffix;
+    }
+    requestAnimationFrame(step);
+  }
+  const counterObs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting) animateCounter(e.target);
+    });
+  },{threshold:0.5});
+  document.querySelectorAll('.counter-val').forEach(el=>counterObs.observe(el));
+})();
+
+// ── 3. HERO PARALLAX — first/last name at different scroll speeds ──
+(function(){
+  const first = document.querySelector('.hero-first');
+  const last  = document.querySelector('.hero-last');
+  if(!first || !last) return;
+  let ticking = false;
+  window.addEventListener('scroll', ()=>{
+    if(ticking) return;
+    ticking = true;
+    requestAnimationFrame(()=>{
+      const y = window.scrollY;
+      // first moves slower (pulled back), last moves faster (pushed forward)
+      first.style.transform = `translateY(${y * -0.06}px)`;
+      last.style.transform  = `translateY(${y * -0.10}px)`;
+      ticking = false;
+    });
+  }, {passive:true});
+})();
+
+// ── 4. MAGNETIC CURSOR ──
+(function(){
+  const STRENGTH = 0.28;
+  document.querySelectorAll('.magnetic').forEach(el=>{
+    let bounds, animId;
+    el.addEventListener('mouseenter', ()=>{
+      bounds = el.getBoundingClientRect();
+    });
+    el.addEventListener('mousemove', e=>{
+      if(!bounds) return;
+      cancelAnimationFrame(animId);
+      const cx = bounds.left + bounds.width  / 2;
+      const cy = bounds.top  + bounds.height / 2;
+      const dx = (e.clientX - cx) * STRENGTH;
+      const dy = (e.clientY - cy) * STRENGTH;
+      animId = requestAnimationFrame(()=>{
+        el.style.transform = `translate(${dx}px,${dy}px)`;
+      });
+    });
+    el.addEventListener('mouseleave', ()=>{
+      cancelAnimationFrame(animId);
+      el.style.transform = '';
+      bounds = null;
+    });
+  });
+})();
+
+// ── 5. SHIMMER handled by CSS ::after pseudo-element ──
+// No JS needed — pure CSS transition on hover
+
+
+// ── PARTICLE FIELD ──
+(function(){
+  const canvas = document.getElementById('hero-canvas');
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, particles, animId;
+  const COUNT = 72;
+  const MAX_DIST = 140;
+  const SPEED = 0.28;
+
+  function isDark(){
+    const t = document.documentElement.getAttribute('data-theme');
+    if(t === 'dark') return true;
+    if(t === 'light') return false;
+    return window.matchMedia('(prefers-color-scheme:dark)').matches;
+  }
+
+  function resize(){
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+
+  function randRange(a,b){ return a + Math.random()*(b-a); }
+
+  function initParticles(){
+    particles = Array.from({length:COUNT}, ()=>({
+      x: Math.random()*W,
+      y: Math.random()*H,
+      vx: randRange(-SPEED, SPEED),
+      vy: randRange(-SPEED, SPEED),
+      r: randRange(1.2, 2.4),
+    }));
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    const dark = isDark();
+    const dotColor  = dark ? 'rgba(201,168,76,' : 'rgba(154,116,40,';
+    const lineColor = dark ? 'rgba(201,168,76,' : 'rgba(154,116,40,';
+
+    // Move
+    particles.forEach(p=>{
+      p.x += p.vx; p.y += p.vy;
+      if(p.x < 0) p.x = W; if(p.x > W) p.x = 0;
+      if(p.y < 0) p.y = H; if(p.y > H) p.y = 0;
+    });
+
+    // Connections
+    for(let i=0;i<particles.length;i++){
+      for(let j=i+1;j<particles.length;j++){
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const d  = Math.sqrt(dx*dx+dy*dy);
+        if(d < MAX_DIST){
+          const alpha = (1 - d/MAX_DIST) * (dark ? 0.22 : 0.15);
+          ctx.strokeStyle = lineColor + alpha + ')';
+          ctx.lineWidth = 0.7;
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Dots
+    particles.forEach(p=>{
+      const alpha = dark ? 0.55 : 0.4;
+      ctx.fillStyle = dotColor + alpha + ')';
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+      ctx.fill();
+    });
+
+    animId = requestAnimationFrame(draw);
+  }
+
+  // Init
+  resize();
+  initParticles();
+  draw();
+
+  // Resize handler
+  let resizeTimer;
+  window.addEventListener('resize', ()=>{
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(()=>{
+      cancelAnimationFrame(animId);
+      resize();
+      initParticles();
+      draw();
+    }, 200);
+  });
+
+  // Pause when not visible — performance
+  document.addEventListener('visibilitychange', ()=>{
+    if(document.hidden){ cancelAnimationFrame(animId); }
+    else { draw(); }
+  });
+
+  // Slow down when scrolled past hero
+  window.addEventListener('scroll', ()=>{
+    const heroH = document.querySelector('.hero').offsetHeight;
+    const scrolled = window.scrollY > heroH;
+    if(scrolled && animId){
+      cancelAnimationFrame(animId);
+      animId = null;
+    } else if(!scrolled && !animId){
+      draw();
+    }
+  }, {passive:true});
+
+  // Re-init on theme toggle
+  window.addEventListener('themechange', ()=>{ /* colors update automatically via isDark() */ });
+})();
 
 </script>
 </body>
