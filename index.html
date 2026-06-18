@@ -109,7 +109,8 @@ h2 em{font-family:'Alta Caption',sans-serif;font-size:1em;text-transform:upperca
 .sec-sub{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:var(--text2);margin-top:10px;font-weight:300}
 
 /* PILLARS */
-.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-top:48px}
+.pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:48px}
+@media(max-width:700px){.pillars{grid-template-columns:1fr}}
 .pillar{background:var(--bg);padding:32px;transition:background .2s}
 .pillar:hover{background:var(--bg2)}
 .pillar-num{font-family:'Alta Caption',sans-serif;font-size:48px;color:var(--border2);letter-spacing:0.06em;line-height:1;margin-bottom:16px}
@@ -117,7 +118,9 @@ h2 em{font-family:'Alta Caption',sans-serif;font-size:1em;text-transform:upperca
 .pillar p{font-size:14px;color:var(--text2);line-height:1.65}
 
 /* IMPACT */
-.impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-top:48px}
+.impact-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:48px}
+@media(max-width:900px){.impact-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.impact-grid{grid-template-columns:1fr}}
 .impact-cell{background:var(--bg);padding:32px 24px;text-align:center;transition:background .2s}
 .impact-cell:hover{background:var(--bg2)}
 .impact-n{font-family:'Alta Caption',sans-serif;font-size:42px;letter-spacing:0.06em;color:var(--gold);line-height:1}
@@ -527,7 +530,7 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
 <section>
   <div class="section-header fade-up">
     <span class="sec-label">The standard</span>
-    <h2>Three things, <em>every</em> role.</h2>
+    <h2>Four things, <em>every</em> role.</h2>
   </div>
   <div class="pillars">
     <div class="pillar fade-up">
@@ -544,6 +547,11 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
       <div class="pillar-num">03</div>
       <h3>Treat the business like it's my own</h3>
       <p>Fiscal discipline, delivery risk, supply chain accountability — I hold myself to ownership-level standards on all of it. The business's money and reputation are never someone else's problem to protect.</p>
+    </div>
+    <div class="pillar fade-up">
+      <div class="pillar-num">04</div>
+      <h3>Be the layer between founders and the ground</h3>
+      <p>Founders want control, but at growth stage they need someone who can run the floor while feeding them just enough signal to stay informed — not buried. I've held that position for multiple founders at once — the job is trust, not just reporting.</p>
     </div>
   </div>
   <div style="margin-top:48px;padding:36px 40px;border:1px solid var(--border2);background:var(--gold2)" class="fade-up">
@@ -807,35 +815,36 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
       </div>
     </div>
 
-    <!-- Card 2: Material Consumption & Inventory System -->
+    <!-- Card 2: Store Intelligence Platform -->
     <div class="system-card fade-up">
       <div class="system-preview" style="background:var(--bg4)">
         <div style="padding:14px;width:100%;display:flex;flex-direction:column;gap:6px">
-          <div style="display:flex;gap:6px">
-            <div style="background:var(--gold2);border:1px solid var(--border2);border-radius:2px;padding:4px 8px;font-family:'DM Mono',monospace;font-size:9px;color:var(--gold)">OUT · 11,792 rows</div>
-            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:4px 8px;font-family:'DM Mono',monospace;font-size:9px;color:var(--text3)">IN · Stock receipts</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap">
+            <div style="background:rgba(220,80,60,.15);border:1px solid rgba(220,80,60,.4);border-radius:2px;padding:4px 8px;font-family:'DM Mono',monospace;font-size:9px;color:#e07a64">190 · Negative</div>
+            <div style="background:rgba(220,80,60,.15);border:1px solid rgba(220,80,60,.4);border-radius:2px;padding:4px 8px;font-family:'DM Mono',monospace;font-size:9px;color:#e07a64">373 · Reorder</div>
+            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:2px;padding:4px 8px;font-family:'DM Mono',monospace;font-size:9px;color:var(--text3)">39 · Overstocked</div>
           </div>
-          <div style="background:var(--gold2);border:1px solid var(--border2);border-radius:2px;padding:6px 10px;font-family:'DM Mono',monospace;font-size:9px;color:var(--gold)">TALLY EXPORT · 1-click → Tally-ready</div>
+          <div style="background:var(--gold2);border:1px solid var(--border2);border-radius:2px;padding:6px 10px;font-family:'DM Mono',monospace;font-size:9px;color:var(--gold)">771 SKUs · Live status classification + reorder logic</div>
         </div>
-        <span class="system-badge internal">Internal</span>
+        <span class="system-badge">● Live</span>
       </div>
       <div class="system-body">
-        <div class="system-org">Arten Space · Google Sheets</div>
-        <div class="system-title">Material Consumption & Inventory System</div>
-        <div class="system-desc">5-tab live ledger tracking every material movement. Auto-generates Tally Stock Journal entries via Apps Script. Dual-verification on all inward stock.</div>
+        <div class="system-org">Arten Space · Web App</div>
+        <div class="system-title">Store Intelligence Platform</div>
+        <div class="system-desc">Real-time inventory intelligence across 771 SKUs — auto-classifies every item as negative, reorder, overstocked, watch-list, or adequate. Per-item drill-down shows consumption trend, safety stock with lead-time buffer, and days-of-stock-remaining. Every issue traced to its project.</div>
         <div class="system-pills">
           <span class="system-pill">Google Sheets</span>
           <span class="system-pill">Apps Script</span>
-          <span class="system-pill">Tally Integration</span>
-          <span class="system-pill">Inventory Control</span>
+          <span class="system-pill">Live Sync</span>
+          <span class="system-pill">Reorder Logic</span>
         </div>
       </div>
       <div class="system-right">
         <div class="system-stats-col">
-          <div class="system-stat"><span class="system-stat-n">11K+</span><span class="system-stat-l">Entries</span></div>
+          <div class="system-stat"><span class="system-stat-n">771</span><span class="system-stat-l">SKUs tracked</span></div>
           <div class="system-stat"><span class="system-stat-n">180h</span><span class="system-stat-l">Saved/mo</span></div>
         </div>
-        <span class="system-link disabled">Demo Soon</span>
+        <a class="system-link" href="https://hsartenspace.github.io/Production-Dashboard/store.html" target="_blank" rel="noopener">View Live ↗</a>
       </div>
     </div>
 
@@ -1005,6 +1014,7 @@ footer{border-top:1px solid var(--border);padding:48px 40px;text-align:center}
     <div class="cs-drawer-section">
       <div class="cs-drawer-label">The Situation</div>
       <p>Arten Space had the right ingredients — quality product, strong design sensibility, and genuine relationships with architects, interior designers, and HNWI clients across Udaipur and PAN India. Business was flowing. But underneath, the operating system was failing quietly.</p>
+      <p>The brand is led by two co-founders, both of whom needed visibility into operations without being pulled into the daily weeds. That meant building one system that could keep both informed and aligned — not two separate reporting tracks that risked diverging.</p>
       <p>Every department ran on paper coupons — material requisitions, gate passes, job cards, petty cash, dispatch tracking. Data entry executives sat at every process node, manually transcribing and re-entering data. Despite all this effort, nothing was actually visible. Management had no live picture of what was happening on the floor, in the store, or in accounts.</p>
       <p>There was no leave policy. No productivity measurement. No QC at department level. Rework was common but unquantified. HR was drowning in daily paperwork. Broken child processes upstream of production — compounded by poor cross-team communication — were silently costing the business every day.</p>
     </div>
